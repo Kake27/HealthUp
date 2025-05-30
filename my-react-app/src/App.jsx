@@ -9,7 +9,7 @@ import SignupPatient from '../Pages/Signuppatient.jsx';
 import ForgotPassword from '../Pages/Forgotpassword.jsx';
 import ResetPassword from '../Pages/Resetpassword.jsx';
 import PatientDashboard from '../Pages/Patientdashboard.jsx';
-
+import FindDoctor from '../Pages/Finddoctors.jsx';
 function App() {
   return (
     <div className="App">
@@ -23,7 +23,7 @@ function App() {
                 <Route path="/forgot-password" element={<ForgotPassword/>} />
                 <Route path="/reset-password" element={<ResetPassword/>} />
                 <Route path="/patient-dashboard" element={<PatientDashboard/>} />
-                <Route path="/find-doctors" element={<PatientDashboard/>} />
+                <Route path="/find-doctors" element={<FindDoctor/>} />
           </Routes>
         </div>
 

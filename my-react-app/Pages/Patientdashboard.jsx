@@ -2,14 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/Patientdash.css";
 
-// const FindDoctorsPage = () => {
-//   return (
-//     <div>
-//       <h2>Find a Doctor</h2>
-//       <SearchBar onSearch={(query) => console.log(query)} />
-//     </div>
-//   );
-// };
 
 
 const PatientDashboard = () => {
@@ -39,7 +31,7 @@ const PatientDashboard = () => {
       <nav className="navbar">
         <div className="logo">YourApp</div>
         <ul className="menu">
-         <li onClick={() => navigate('/find-doctors')} style={{ cursor: "pointer" }}>
+         <li onClick={() => navigate('/find-doctors')} >
   Find Doctors
 </li>
           <li>Video Consult</li>
