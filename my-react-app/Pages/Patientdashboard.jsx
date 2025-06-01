@@ -27,7 +27,7 @@ const PatientDashboard = () => {
   }, []);
 
   return (
-    <div className="dashboard">
+    <div className="dashboard"    style={{ height: "200vh",}}>
       <nav className="navbar">
         <div className="logo">YourApp</div>
         <ul className="menu">
@@ -45,11 +45,10 @@ const PatientDashboard = () => {
     href="#"
     role="button"
     data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
+    aria-expanded="false"  style={{paddingRight:"65px"}}>
     Welcome, Piyush
   </a>
-<ul className="dropdown-menu">
+<ul className="dropdown-menu"   >
 <li>
       <a className="dropdown-item" onClick={() => navigate('/register-doctor')}>
         My Appointments

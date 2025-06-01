@@ -42,7 +42,7 @@ const Frontpage = () => {
   >
     Register
   </a>
-  <ul className="dropdown-menu">
+  <ul className="dropdown-menu" style={{width:"65px"}}>
     <li>
       <a className="dropdown-item" onClick={() => navigate('/register-doctor')}>
         As a Doctor
@@ -125,7 +125,7 @@ const styles = {
   form: {
     padding: "20px",
     backgroundColor: "white",
-    boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+    boxShadow: "0 0 10px rgba(7, 8, 3, 0.1)",
     borderRadius: "8px"
   }
 };

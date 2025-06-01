@@ -60,7 +60,7 @@ const FindDoctor = () => {
   );
 
   return (
-    <div className="find-doctor-page">
+    <div className="find-doctor-page"   style={{ height: "200vh"}}>
       <h2 style={{ textAlign: "center", marginTop: "20px" }}>Find a Doctor</h2>
 
       <div style={{ display: "flex", justifyContent: "center", margin: "20px" }}>
@@ -69,7 +69,7 @@ const FindDoctor = () => {
 
       <div className="doctor-card-container" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {filteredDoctors.map((doc) => (
-          <div className="card" style={{ width: "18rem", margin: "15px" }} key={doc.id}>
+          <div className="card" style={{ width: "18rem", margin: "60px" }} key={doc.id}>
             <img src={doc.image} className="card-img-top" alt={doc.name} />
             <div className="card-body">
               <h5 className="card-title">{doc.name}</h5>
@@ -84,3 +84,4 @@ const FindDoctor = () => {
 };
 
 export default FindDoctor;
+
