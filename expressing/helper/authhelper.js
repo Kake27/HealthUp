@@ -1,18 +1,24 @@
-const bcrypt = require("bcryptjs"); // Use bcryptjs instead of bcrypt
+// helper/authhelper.js
+const bcrypt = require("bcryptjs");
 
-const hashing = async (password) => {
+// Hash a plain‐text password with 10 salt rounds
+const hashing = async (password, saltRounds = 10) => {
   try {
-    const saltRounds = 10; // Corrected variable name
-    const hashedPassword = await bcrypt.hash(password, saltRounds);
-    return hashedPassword;
+    return await bcrypt.hash(password, saltRounds);
   } catch (e) {
     console.error("Hashing Error:", e);
     throw e;
   }
 };
 
+// Compare a plain text password with a hash
 const comparePassword = async (password, hashedPassword) => {
-  return bcrypt.compare(password, hashedPassword);
+  try {
+    return await bcrypt.compare(password, hashedPassword);
+  } catch (e) {
+    console.error("Compare Password Error:", e);
+    throw e;
+  }
 };
 
 module.exports = { hashing, comparePassword };

@@ -3,9 +3,10 @@ const router = express.Router();
 const { signupdoctor, signuppatient, loginboth, forgotpass } = require("../controllers/authcontroller.js");
 const userlogin = require("../models/usermodel.js");
 const { hashing } = require('../helper/authhelper.js');
-
+const multer = require("multer");
+const upload = multer(); 
 // for first time registration/signup (doctors)
-router.post("/signup-doctor",signupdoctor);
+router.post("/signup-doctor",upload.single("photo"),signupdoctor);
 // for first time registration/signup (patients)
 router.post("/signup-patient",signuppatient);
 

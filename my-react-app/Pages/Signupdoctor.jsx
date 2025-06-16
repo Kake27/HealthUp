@@ -1,7 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignupDoctor = () => {
   const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    role: 'doctor',
     specialization: '',
     experience: '',
     availableDays: [],
@@ -10,13 +15,14 @@ const SignupDoctor = () => {
     consultationFee: '',
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
-
     if (type === 'file') {
-      setFormData({ ...formData, [name]: files[0] });
+      setFormData((f) => ({ ...f, [name]: files[0] }));
     } else {
-      setFormData({ ...formData, [name]: value });
+      setFormData((f) => ({ ...f, [name]: value }));
     }
   };
 
@@ -26,131 +32,231 @@ const SignupDoctor = () => {
       ...prev,
       availableDays: checked
         ? [...prev.availableDays, value]
-        : prev.availableDays.filter((day) => day !== value),
+        : prev.availableDays.filter((d) => d !== value),
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send formData to backend using fetch or axios
-    console.log(formData);
+
+    // Build FormData
+    const submissionData = new FormData();
+    for (const key in formData) {
+      if (key === 'availableDays') {
+        formData.availableDays.forEach((day) =>
+          submissionData.append('availableDays[]', day)
+        );
+      } else if (key === 'experience' || key === 'consultationFee') {
+        // cast numbers to strings
+        submissionData.append(key, String(formData[key]));
+      } else {
+        submissionData.append(key, formData[key]);
+      }
+    }
+
+    // 🚨 Debug-log every field:
+    for (let [field, val] of submissionData.entries()) {
+      console.log(field, val);
+    }
+
+    try {
+      const response = await fetch(
+        'http://localhost:9000/api/healthcare/auth/signup-doctor',
+        {
+          method: 'POST',
+          body: submissionData,
+        }
+      );
+      const data = await response.json();
+      console.log(data);
+
+      if (data.success) {
+        localStorage.setItem('token', data.authtoken);
+        navigate('/home');
+      } else {
+        alert(data.error || data.message || 'Signup failed.');
+      }
+    } catch (err) {
+      console.error('Error signing up:', err);
+      alert('An unexpected error occurred. Please try again later.');
+    }
   };
 
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
 
   return (
+    <div style={styles.container}>
+      <form onSubmit={handleSubmit} style={styles.form}>
+        {/* Name */}
+        <div className="mb-3">
+          <label className="form-label">Name</label>
+          <input
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            required
+          />
+        </div>
 
+        {/* Email */}
+        <div className="mb-3">
+          <label className="form-label">Email address</label>
+          <input
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            type="email"
+            className="form-control"
+            required
+          />
+        </div>
 
-     <div style={styles.container}>
-    <form onSubmit={handleSubmit} style={styles.form}>
-  <div className="mb-3">
-      <label htmlFor="exampleInputEmail1" className="form-label">
-        Email address
-      </label>
-      <input
-        type="email"
-        className="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-      />
-      <div id="emailHelp" className="form-text">
-        We'll never share your email with anyone else.
-      </div>
-    </div>
+        {/* Password */}
+        <div className="mb-3">
+          <label className="form-label">Password</label>
+          <input
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            type="password"
+            className="form-control"
+            required
+          />
+        </div>
 
-    <div className="mb-3">
-      <label htmlFor="exampleInputPassword1" className="form-label">
-        Password
-      </label>
-      <input
-        type="password"
-        className="form-control"
-        id="exampleInputPassword1"
-      />
-    </div>
+        {/* Role */}
+        <div className="mb-3">
+          <label className="form-label">Role</label>
+          <input
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            required
+          />
+        </div>
 
-    <div className="mb-3">
-      <label htmlFor="exampleInputRole1" className="form-label">
-        Role
-      </label>
-      <input
-        type="text"
-        className="form-control"
-        id="exampleInputRole1"
-      />
-      <div className="form-text">Doctor or Patient</div>
-    </div>
+        {/* Specialization */}
+        <div className="mb-3">
+          <label className="form-label">Specialization</label>
+          <input
+            name="specialization"
+            value={formData.specialization}
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            required
+          />
+        </div>
 
-   
-      <div className="mb-3">
-        <label className="form-label">Specialization</label>
-        <input type="text" className="form-control" name="specialization" value={formData.specialization} onChange={handleChange} required />
-      </div>
+        {/* Experience */}
+        <div className="mb-3">
+          <label className="form-label">Experience (years)</label>
+          <input
+            name="experience"
+            value={formData.experience}
+            onChange={handleChange}
+            type="number"
+            className="form-control"
+            required
+          />
+        </div>
 
-      <div className="mb-3">
-        <label className="form-label">Experience (in years)</label>
-        <input type="number" className="form-control" name="experience" value={formData.experience} onChange={handleChange} required />
-      </div>
-
-      <div className="mb-3">
-        <label className="form-label">Available Days</label><br />
-        {days.map((day) => (
-          <div className="form-check form-check-inline" key={day}>
-            <input
-              type="checkbox"
-              className="form-check-input"
-              value={day}
-              onChange={handleCheckboxChange}
-              checked={formData.availableDays.includes(day)}
-            />
-            <label className="form-check-label">{day}</label>
+        {/* Available Days */}
+        <div className="mb-3">
+          <label className="form-label">Available Days</label>
+          <div>
+            {days.map((d) => (
+              <div className="form-check form-check-inline" key={d}>
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id={d}
+                  value={d}
+                  onChange={handleCheckboxChange}
+                  checked={formData.availableDays.includes(d)}
+                />
+                <label className="form-check-label" htmlFor={d}>
+                  {d}
+                </label>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
 
-      <div className="mb-3">
-        <label className="form-label">Available Time (e.g., 10:00 AM - 2:00 PM)</label>
-        <input type="text" className="form-control" name="availableTime" value={formData.availableTime} onChange={handleChange} />
-      </div>
+        {/* Available Time */}
+        <div className="mb-3">
+          <label className="form-label">Available Time</label>
+          <input
+            name="availableTime"
+            value={formData.availableTime}
+            onChange={handleChange}
+            type="text"
+            placeholder="e.g., 10:00 AM - 2:00 PM"
+            className="form-control"
+            required
+          />
+        </div>
 
-      <div className="mb-3">
-        <label className="form-label">Photo</label>
-        <input type="file" className="form-control" name="photo" onChange={handleChange} accept="image/*" />
-      </div>
+        {/* Photo */}
+        <div className="mb-3">
+          <label className="form-label">Photo</label>
+          <input
+            name="photo"
+            onChange={handleChange}
+            type="file"
+            accept="image/*"
+            className="form-control"
+          
+          />
+        </div>
 
-      <div className="mb-3">
-        <label className="form-label">Consultation Fee (₹)</label>
-        <input type="number" className="form-control" name="consultationFee" value={formData.consultationFee} onChange={handleChange} required />
-      </div>
+        {/* Consultation Fee */}
+        <div className="mb-3">
+          <label className="form-label">Consultation Fee (₹)</label>
+          <input
+            name="consultationFee"
+            value={formData.consultationFee}
+            onChange={handleChange}
+            type="number"
+            className="form-control"
+            required
+          />
+        </div>
 
-      <button type="submit" className="btn btn-primary">Submit</button>
-   
-      
-    </form>
+        <button type="submit" className="btn btn-primary w-100">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
 
 const styles = {
   container: {
-    height: "200vh",
+    minHeight: "200vh",
     display: "flex",
-    justifyContent: "center",  
-    alignItems: "center",      
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "#f2f2f2",
   },
   form: {
     padding: "20px",
     backgroundColor: "white",
     boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-    borderRadius: "8px"
+    borderRadius: "8px",
+    width: "500px"
   }
 };
-
-
-
-
-
-
-
 export default SignupDoctor;
