@@ -3,12 +3,12 @@ const userlogin = require("../models/usermodel");
 
 const requirePatient = async (req, res, next) => {
   try {
-    const token = req.header("Authorization");
+    const token = req.header("Authorization") || req.header("auth-token");
     if (!token) {
       return res.status(401).json({ message: "Access Denied. No token provided." });
     }
 
-    const decoded = jwt.verify(token, "your_secret_key");
+    const decoded = jwt.verify(token, "piyush");
     req.user = await userlogin.findById(decoded.id);
 
     if (!req.user || req.user.role !== "patient") {

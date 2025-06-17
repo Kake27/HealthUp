@@ -1,82 +1,108 @@
+// src/components/SignupPatient.jsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignupPatient = () => {
   const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    role: 'patient',
     age: '',
     gender: '',
     medicalHistory: '',
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Convert medicalHistory string (comma-separated) to array
-    const payload = {
-      ...formData,
-      medicalHistory: formData.medicalHistory
-        .split(',')
-        .map((item) => item.trim())
-        .filter((item) => item !== ''),
-    };
+    // Client‑side validation
+    const { name, email, password, role, age, gender } = formData;
+    if (!name || !email || !password || !role || !age || !gender) {
+      alert('Please fill all required fields');
+      return;
+    }
 
-    console.log('Submit Payload:', payload);
+    try {
+      const response = await fetch(
+        'http://localhost:9000/api/healthcare/auth/signup-patient',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }
+      );
+      const data = await response.json();
+      console.log('Signup response:', data);
 
-    // You can send `payload` using axios or fetch
+      if (response.ok && data.success) {
+        localStorage.setItem('token', data.token);
+        navigate('/patient-dashboard');
+      } else {
+        alert(data.error || data.message || 'Signup failed.');
+      }
+    } catch (err) {
+      console.error('Error signing up:', err);
+      alert('An unexpected error occurred. Please try again later.');
+    }
   };
 
   return (
     <div style={styles.container}>
       <form onSubmit={handleSubmit} style={styles.form}>
+        <h3>Patient Signup</h3>
+
         <div className="mb-3">
-      <label htmlFor="exampleInputEmail1" className="form-label">
-        Email address
-      </label>
-      <input
-        type="email"
-        className="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-      />
-      <div id="emailHelp" className="form-text">
-        We'll never share your email with anyone else.
-      </div>
-    </div>
+          <label className="form-label">Name</label>
+          <input
+            name="name"
+            type="text"
+            className="form-control"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-    <div className="mb-3">
-      <label htmlFor="exampleInputPassword1" className="form-label">
-        Password
-      </label>
-      <input
-        type="password"
-        className="form-control"
-        id="exampleInputPassword1"
-      />
-    </div>
+        <div className="mb-3">
+          <label className="form-label">Email address</label>
+          <input
+            name="email"
+            type="email"
+            className="form-control"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-    <div className="mb-3">
-      <label htmlFor="exampleInputRole1" className="form-label">
-        Role
-      </label>
-      <input
-        type="text"
-        className="form-control"
-        id="exampleInputRole1"
-      />
-      <div className="form-text">Doctor or Patient</div>
-    </div>
+        <div className="mb-3">
+          <label className="form-label">Password</label>
+          <input
+            name="password"
+            type="password"
+            className="form-control"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-    
+        {/* hidden role, still sent in JSON */}
+        <input type="hidden" name="role" value="patient" />
+
         <div className="mb-3">
           <label className="form-label">Age</label>
           <input
+            name="age"
             type="number"
             className="form-control"
-            name="age"
             value={formData.age}
             onChange={handleChange}
             required
@@ -86,8 +112,8 @@ const SignupPatient = () => {
         <div className="mb-3">
           <label className="form-label">Gender</label>
           <select
-            className="form-select"
             name="gender"
+            className="form-select"
             value={formData.gender}
             onChange={handleChange}
             required
@@ -104,16 +130,18 @@ const SignupPatient = () => {
             Medical History <small>(separate by commas)</small>
           </label>
           <input
+            name="medicalHistory"
             type="text"
             className="form-control"
-            name="medicalHistory"
             value={formData.medicalHistory}
             onChange={handleChange}
             placeholder="e.g., Diabetes, Asthma"
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
       </form>
     </div>
   );
@@ -121,7 +149,7 @@ const SignupPatient = () => {
 
 const styles = {
   container: {
-    height: '200vh',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -133,8 +161,8 @@ const styles = {
     boxShadow: '0 0 10px rgba(0,0,0,0.1)',
     borderRadius: '8px',
     width: '100%',
-    maxWidth: '400px'
-  }
+    maxWidth: '400px',
+  },
 };
 
 export default SignupPatient;

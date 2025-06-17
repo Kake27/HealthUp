@@ -22,7 +22,7 @@ function App() {
             <Route path="/register-doctor" element={<SignupDoctor/>} />
                <Route path="/register-patient" element={<SignupPatient/>} />
                 <Route path="/forgot-password" element={<ForgotPassword/>} />
-                <Route path="/reset-password" element={<ResetPassword/>} />
+                <Route path="/reset-password/:token" element={<ResetPassword/>} />
                 <Route path="/patient-dashboard" element={<PatientDashboard/>} />
                 <Route path="/doctor-dashboard" element={<DoctorDashboard/>} />
                 <Route path="/find-doctors" element={<FindDoctor/>} />

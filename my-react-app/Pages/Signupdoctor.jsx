@@ -72,7 +72,7 @@ const SignupDoctor = () => {
 
       if (data.success) {
         localStorage.setItem('token', data.authtoken);
-        navigate('/home');
+        navigate('/doctor-dashboard');
       } else {
         alert(data.error || data.message || 'Signup failed.');
       }

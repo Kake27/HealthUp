@@ -78,6 +78,9 @@ const signuppatient = async (req, res) => {
   try {
     const { name, email, password, role, age, gender, medicalHistory } = req.body;
 
+console.log(name);
+
+
     if (!name || !email || !password || !role) {
       return res.status(400).json({
         success: false,
@@ -123,6 +126,9 @@ const signuppatient = async (req, res) => {
 const loginboth = async (req, res) => {
   try {
     const { email, password, role } = req.body;
+
+console.log(email);
+
     if (!email || !password || !role) {
       return res.status(400).json({
         success: false,
@@ -148,7 +154,7 @@ const loginboth = async (req, res) => {
 
     const token = jwt.sign(
       { id: user._id, email: user.email, role: user.role },
-      process.env.JWT_SECRET,
+      "piyush",
       { expiresIn: "1h" }
     );
 
@@ -195,7 +201,7 @@ const forgotpass = async (req, res) => {
       subject: "Password Reset",
       text: 
         `Click the link to reset your password:\n\n` +
-        `http://${req.headers.host}/api/healthcare/auth/reset-password/${token}\n\n` +
+        `http://localhost:5173/reset-password/${token}\n\n` +
         `If you didn't request this, ignore this email.\n`
     };
 
@@ -219,32 +225,44 @@ const forgotpass = async (req, res) => {
 const resetPassword = async (req, res) => {
   try {
     const { token } = req.params;
-    const { newPassword } = req.body;
+    const { password } = req.body;
 
-    const user = await userlogin.findOne({
-      resetPasswordToken: token,
-      resetPasswordExpires: { $gt: Date.now() }
-    });
-    if (!user) {
-      return res.status(400).json({
-        success: false,
-        error: "Token is invalid or has expired"
-      });
+    // 1) Validate incoming
+    if (!password) {
+      return res
+        .status(400)
+        .json({ success: false, error: 'New password is required' });
     }
 
-    user.password = await hashing(newPassword, 10);
-    user.resetPasswordToken   = undefined;
+    // 2) Find the user by token & expiry
+    const user = await userlogin.findOne({
+      resetPasswordToken: token,
+      resetPasswordExpires: { $gt: Date.now() },
+    });
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, error: 'Token is invalid or expired' });
+    }
+
+    // 3) Hash the new password
+    user.password = await hashing(password);
+
+    // 4) Clear the reset fields
+    user.resetPasswordToken = undefined;
     user.resetPasswordExpires = undefined;
+
     await user.save();
 
-    res.json({ success: true, message: "Password has been reset." });
+    return res
+      .status(200)
+      .json({ success: true, message: 'Password has been reset' });
   } catch (e) {
-    console.error("Reset Password Error:", e);
-    return res.status(500).json({
-      success: false,
-      message: "Server error",
-      error: e.message
-    });
+    console.error('Reset Password Error:', e);
+    return res
+      .status(500)
+      .json({ success: false, message: 'Server error', error: e.message });
   }
 };
 

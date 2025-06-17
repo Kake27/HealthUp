@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/healthcare/auth/forgot-password', {
+      const res = await fetch('http://localhost:9000/api/healthcare/auth/forgot-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
