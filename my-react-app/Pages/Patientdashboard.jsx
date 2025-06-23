@@ -67,7 +67,7 @@ const PatientDashboard = () => {
                   className="dropdown-item"
                   onClick={() => navigate("/online-consultations")}
                 >
-                  My Online Consultations
+                  My Feedback
                 </a>
               </li>
               <li>
@@ -75,15 +75,18 @@ const PatientDashboard = () => {
                   className="dropdown-item"
                   onClick={() => navigate("/feedback")}
                 >
-                  My Feedback
+                  Settings
                 </a>
               </li>
               <li>
                 <a
                   className="dropdown-item"
-                  onClick={() => navigate("/settings")}
+                  onClick={() => {
+                  localStorage.removeItem('token');
+                    navigate("/")
+                  }}
                 >
-                  Settings
+                 Logout
                 </a>
               </li>
             </ul>

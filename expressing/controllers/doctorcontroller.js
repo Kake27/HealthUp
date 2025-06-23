@@ -148,45 +148,78 @@ const update_appoint=async (req,res)=>{
 
 };
 
-const prescription=async (req,res)=>{
+
+
+const createPrescription = async (req, res) => {
   try {
-    const appointmentId = req.params.id;
-    const { medicines, notes } = req.body;
-    
-    // Create a new prescription entry
+    const appointmentId  = req.params.id;
+    const { medicines, instructions } = req.body;
+
+    // 1) Load appointment and populate patient
+    const appointment = await appoint_model
+      .findById(appointmentId);
+
+    if (!appointment) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Appointment not found" });
+    }
+
+  await appoint_model.findByIdAndUpdate(
+     appointmentId,
+     { status: 'Completed' },
+     { new: true }
+   );
+
+    const patientId = appointment.patient?._id;
+    console.log(appointment);
+    console.log("ffffff",patientId);
+    if (!patientId) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Appointment has no patient" });
+    }
+
+    // 2) Build & save prescription
     const newPrescription = new patient_precription({
-      appointment: appointmentId,
-      doctor: req.user._id,
+      appointment:  appointmentId,
+      doctor:       req.user._id,
+      patient:      patientId,
       medicines,
-      notes,
+      instructions
     });
-    
+
     await newPrescription.save();
-    
-    res.status(201).json({
-      success: true,
-      message: "Prescription created successfully",
-      prescription: newPrescription,
+
+    return res.status(201).json({
+      success:      true,
+      message:      "Prescription created successfully",
+      prescription: newPrescription
     });
   } catch (error) {
     console.error("Error creating prescription:", error);
-    res.status(500).json({ success: false, message: "Error creating prescription", error: error.message });
+    return res.status(500).json({
+      success: false,
+      message: "Error creating prescription",
+      error:   error.message
+    });
   }
-
-
 };
+
 
 
 const upcoming_appointments=async (req,res)=>{
 try{
+
+  console.log("frfrfrfr",req.user)
   const appointments = await appoint_model.find({ doctor: req.user._id })
-  .populate({
-    path: "patient",
-    select: "age gender medicalHistory", 
-    populate: {
-      path: "user",
-      select: "name"         
-    }}).select("date timeSlot fee status isPaid symptoms") 
+  // .populate({
+  //   path: "patient",
+  //   select: "age gender medicalHistory", 
+  //   populate: {
+  //     path: "user",
+  //     select: "name"         
+  //   }}).select("date timeSlot fee status isPaid symptoms") 
   .sort({ date: -1 }); 
 
 res.status(200).json({ success: true, appointments });
@@ -206,4 +239,4 @@ catch(error){
 
 
 
-module.exports={update_appoint,update_profile,prescription,upcoming_appointments,get_doctor};
+module.exports={update_appoint,update_profile,createPrescription,upcoming_appointments,get_doctor};

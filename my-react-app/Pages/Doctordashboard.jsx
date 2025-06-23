@@ -96,9 +96,15 @@ const navigate = useNavigate();
                   Patient's Feedback
                 </a>
               </li>
+               <li>
+                <a className="dropdown-item" onClick={() => navigate("/setting")}>
+                  Setting
+                </a>
+              </li>
               <li>
-                <a className="dropdown-item" onClick={() => navigate("/settings")}>
-                  Settings
+                <a className="dropdown-item" onClick={() =>{ localStorage.removeItem('token');
+                    navigate("/")}}>
+                  Logout
                 </a>
               </li>
             </ul>

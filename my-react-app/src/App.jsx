@@ -11,6 +11,7 @@ import ResetPassword from '../Pages/Resetpassword.jsx';
 import PatientDashboard from '../Pages/Patientdashboard.jsx';
 import FindDoctor from '../Pages/Finddoctors.jsx';
 import DoctorDashboard from '../Pages/Doctordashboard.jsx';
+import DoctorAppointments from '../Pages/Doctorappoint.jsx';
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/patient-dashboard" element={<PatientDashboard/>} />
                 <Route path="/doctor-dashboard" element={<DoctorDashboard/>} />
                 <Route path="/find-doctors" element={<FindDoctor/>} />
+                 <Route path="/todays-appointments" element={<DoctorAppointments/>} />
           </Routes>
         </div>
 

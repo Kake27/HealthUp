@@ -7,7 +7,6 @@ const Commonstate = ({ children }) => {
   const [patient, setPatient] = useState(null);
   const [loading, setLoading] = useState(true);
 
-
   const refreshdoctor = async () => {
     setLoading(true);
     const token = localStorage.getItem('token');
@@ -68,6 +67,7 @@ const Commonstate = ({ children }) => {
 
     setLoading(false);
   };
+
 
 
   return (

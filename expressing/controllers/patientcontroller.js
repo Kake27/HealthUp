@@ -118,7 +118,7 @@ const search=async (req,res)=>{
             { specialization: { $regex: keyword, $options: "i" } },
             { name: { $regex: keyword, $options: "i" } },
           ],
-        }).populate("user", "name email").lean().select("specialization experience availableDays availableTime user");
+        }).populate("user", "name email").lean().select("specialization experience availableDays availableTime user photo");
     console.log(results);
         res.json(results);
       } catch (error) {
