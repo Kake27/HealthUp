@@ -120,11 +120,11 @@ const LoginForm = () => {
 
 const styles = {
   container: {
-    height: '100vh',
+    height: '200vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f2f2f2',
+    backgroundColor: 'white',
   },
   form: {
     padding: '20px',

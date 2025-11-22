@@ -20,61 +20,62 @@ const PatientDashboard = () => {
 
   return (
     <div className="dashboard" style={{ height: "200vh" }}>
-      <nav className="navbar">
-        <div className="logo">YourApp</div>
-        <ul className="menu">
-          <li onClick={() => navigate("/find-doctors")}>Find Doctors</li>
-          <li>Video Consult</li>
-          <li>Surgeries</li>
+      {/* Blue Navbar */}
+      <nav
+        className="navbar"
+        style={{
+          height:"10vh",
+          backgroundColor: "#007BFF",
+          padding: "10px 20px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          color: "white",
+        }}
+      >
+        <div className="logo" style={{ fontWeight: "bold", fontSize: "20px", color: "white" }}>
+          Health Up
+        </div>
+
+        <ul className="menu" style={{ listStyle: "none", display: "flex", gap: "20px", margin: 0 }}>
+          <li style={{ cursor: "pointer", color: "white" }} onClick={() => navigate("/find-doctors")}>Find Doctors</li>
+          <li style={{ color: "white", cursor: "pointer" }}>Video Consult</li>
+          <li style={{ color: "white", cursor: "pointer" }}>Surgeries</li>
         </ul>
+
         <div className="profile-dropdown" ref={dropdownRef}>
           <a
             className="nav-link dropdown-toggle"
             href="#"
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            style={{ paddingRight: "65px" }}
+            style={{ paddingRight: "65px", color: "white" }}
           >
-            Welcome, {/** you can also consume name via context here **/}Piyush
+            Welcome, Piyush
           </a>
           {dropdownOpen && (
             <ul className="dropdown-menu show">
               <li>
-                <a
-                  className="dropdown-item"
-                  onClick={() => navigate("/my-appointments")}
-                >
+                <a className="dropdown-item" onClick={() => navigate("/my-appointments")}>
                   My Appointments
                 </a>
               </li>
               <li>
-                <a
-                  className="dropdown-item"
-                  onClick={() => navigate("/medicine-orders")}
-                >
+                <a className="dropdown-item" onClick={() => navigate("/medicine-orders")}>
                   My Medicine Orders
                 </a>
               </li>
               <li>
-                <a
-                  className="dropdown-item"
-                  onClick={() => navigate("/medical-records")}
-                >
-                  My Medical Records
+                <a className="dropdown-item" onClick={() => navigate("/patient-prescription")}>
+                  My Prescription Records
                 </a>
               </li>
               <li>
-                <a
-                  className="dropdown-item"
-                  onClick={() => navigate("/online-consultations")}
-                >
+                <a className="dropdown-item" onClick={() => navigate("/online-consultations")}>
                   My Feedback
                 </a>
               </li>
               <li>
-                <a
-                  className="dropdown-item"
-                  onClick={() => navigate("/feedback")}
-                >
+                <a className="dropdown-item" onClick={() => navigate("/feedback")}>
                   Settings
                 </a>
               </li>
@@ -82,11 +83,11 @@ const PatientDashboard = () => {
                 <a
                   className="dropdown-item"
                   onClick={() => {
-                  localStorage.removeItem('token');
-                    navigate("/")
+                    localStorage.removeItem('token');
+                    navigate("/");
                   }}
                 >
-                 Logout
+                  Logout
                 </a>
               </li>
             </ul>
@@ -94,7 +95,6 @@ const PatientDashboard = () => {
         </div>
       </nav>
 
-      {/* ↓↓↓ Patient profile card ↓↓↓ */}
       <PatientProfile />
     </div>
   );

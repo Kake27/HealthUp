@@ -12,6 +12,8 @@ import PatientDashboard from '../Pages/Patientdashboard.jsx';
 import FindDoctor from '../Pages/Finddoctors.jsx';
 import DoctorDashboard from '../Pages/Doctordashboard.jsx';
 import DoctorAppointments from '../Pages/Doctorappoint.jsx';
+import PrescriptionPage from '../Pages/Patientprescription.jsx';
+import UpcomingAppointments from '../Pages/Patientappoint.jsx';
 function App() {
   return (
     <div className="App">
@@ -28,6 +30,8 @@ function App() {
                 <Route path="/doctor-dashboard" element={<DoctorDashboard/>} />
                 <Route path="/find-doctors" element={<FindDoctor/>} />
                  <Route path="/todays-appointments" element={<DoctorAppointments/>} />
+                  <Route path="/patient-prescription" element={<PrescriptionPage/>} />
+                  <Route path="/my-appointments" element={<UpcomingAppointments/>} />
           </Routes>
         </div>
 

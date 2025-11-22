@@ -1,0 +1,4002 @@
+[
+  {
+    "name": "Azithromycin_1",
+    "price": 109.42
+  },
+  {
+    "name": "Salbutamol_2",
+    "price": 387.4
+  },
+  {
+    "name": "Ranitidine_3",
+    "price": 127.27
+  },
+  {
+    "name": "Losartan_4",
+    "price": 143.86
+  },
+  {
+    "name": "Tramadol_5",
+    "price": 106.99
+  },
+  {
+    "name": "Omeprazole_6",
+    "price": 107.41
+  },
+  {
+    "name": "Simvastatin_7",
+    "price": 19.11
+  },
+  {
+    "name": "Sertraline_8",
+    "price": 452.05
+  },
+  {
+    "name": "Amoxicillin_9",
+    "price": 212.25
+  },
+  {
+    "name": "Cetirizine_10",
+    "price": 410.19
+  },
+  {
+    "name": "Simvastatin_11",
+    "price": 280.79
+  },
+  {
+    "name": "Metformin_12",
+    "price": 185.11
+  },
+  {
+    "name": "Lisinopril_13",
+    "price": 32.53
+  },
+  {
+    "name": "Paracetamol_14",
+    "price": 155.18
+  },
+  {
+    "name": "Losartan_15",
+    "price": 233.19
+  },
+  {
+    "name": "Paracetamol_16",
+    "price": 301.23
+  },
+  {
+    "name": "Amlodipine_17",
+    "price": 110.01
+  },
+  {
+    "name": "Azithromycin_18",
+    "price": 206.52
+  },
+  {
+    "name": "Amlodipine_19",
+    "price": 51.6
+  },
+  {
+    "name": "Simvastatin_20",
+    "price": 113.3
+  },
+  {
+    "name": "Lisinopril_21",
+    "price": 297.44
+  },
+  {
+    "name": "Gabapentin_22",
+    "price": 246.72
+  },
+  {
+    "name": "Pantoprazole_23",
+    "price": 106.46
+  },
+  {
+    "name": "Ranitidine_24",
+    "price": 325.5
+  },
+  {
+    "name": "Metoprolol_25",
+    "price": 354.31
+  },
+  {
+    "name": "Atorvastatin_26",
+    "price": 179.53
+  },
+  {
+    "name": "Tramadol_27",
+    "price": 371.69
+  },
+  {
+    "name": "Atorvastatin_28",
+    "price": 188.21
+  },
+  {
+    "name": "Amlodipine_29",
+    "price": 76.52
+  },
+  {
+    "name": "Metformin_30",
+    "price": 287.07
+  },
+  {
+    "name": "Prednisone_31",
+    "price": 50.06
+  },
+  {
+    "name": "Amlodipine_32",
+    "price": 487.0
+  },
+  {
+    "name": "Losartan_33",
+    "price": 67.34
+  },
+  {
+    "name": "Doxycycline_34",
+    "price": 174.75
+  },
+  {
+    "name": "Cefixime_35",
+    "price": 449.71
+  },
+  {
+    "name": "Ibuprofen_36",
+    "price": 431.56
+  },
+  {
+    "name": "Amlodipine_37",
+    "price": 126.29
+  },
+  {
+    "name": "Levothyroxine_38",
+    "price": 282.28
+  },
+  {
+    "name": "Lisinopril_39",
+    "price": 102.38
+  },
+  {
+    "name": "Metformin_40",
+    "price": 230.21
+  },
+  {
+    "name": "Lisinopril_41",
+    "price": 129.06
+  },
+  {
+    "name": "Levothyroxine_42",
+    "price": 270.79
+  },
+  {
+    "name": "Cetirizine_43",
+    "price": 29.41
+  },
+  {
+    "name": "Hydrochlorothiazide_44",
+    "price": 28.81
+  },
+  {
+    "name": "Salbutamol_45",
+    "price": 435.54
+  },
+  {
+    "name": "Prednisone_46",
+    "price": 322.78
+  },
+  {
+    "name": "Sertraline_47",
+    "price": 232.88
+  },
+  {
+    "name": "Cefixime_48",
+    "price": 30.15
+  },
+  {
+    "name": "Prednisone_49",
+    "price": 498.97
+  },
+  {
+    "name": "Doxycycline_50",
+    "price": 363.02
+  },
+  {
+    "name": "Amoxicillin_51",
+    "price": 49.46
+  },
+  {
+    "name": "Sertraline_52",
+    "price": 494.91
+  },
+  {
+    "name": "Amlodipine_53",
+    "price": 476.89
+  },
+  {
+    "name": "Lisinopril_54",
+    "price": 371.88
+  },
+  {
+    "name": "Simvastatin_55",
+    "price": 106.77
+  },
+  {
+    "name": "Metformin_56",
+    "price": 366.04
+  },
+  {
+    "name": "Ranitidine_57",
+    "price": 100.08
+  },
+  {
+    "name": "Doxycycline_58",
+    "price": 72.02
+  },
+  {
+    "name": "Furosemide_59",
+    "price": 491.81
+  },
+  {
+    "name": "Clopidogrel_60",
+    "price": 479.64
+  },
+  {
+    "name": "Gabapentin_61",
+    "price": 43.46
+  },
+  {
+    "name": "Clopidogrel_62",
+    "price": 161.11
+  },
+  {
+    "name": "Metformin_63",
+    "price": 288.88
+  },
+  {
+    "name": "Pantoprazole_64",
+    "price": 286.27
+  },
+  {
+    "name": "Atorvastatin_65",
+    "price": 322.57
+  },
+  {
+    "name": "Ciprofloxacin_66",
+    "price": 205.41
+  },
+  {
+    "name": "Ciprofloxacin_67",
+    "price": 227.23
+  },
+  {
+    "name": "Fluconazole_68",
+    "price": 144.19
+  },
+  {
+    "name": "Domperidone_69",
+    "price": 204.33
+  },
+  {
+    "name": "Ranitidine_70",
+    "price": 51.44
+  },
+  {
+    "name": "Omeprazole_71",
+    "price": 40.91
+  },
+  {
+    "name": "Sertraline_72",
+    "price": 254.91
+  },
+  {
+    "name": "Cefixime_73",
+    "price": 179.66
+  },
+  {
+    "name": "Salbutamol_74",
+    "price": 497.71
+  },
+  {
+    "name": "Pantoprazole_75",
+    "price": 497.11
+  },
+  {
+    "name": "Ranitidine_76",
+    "price": 45.92
+  },
+  {
+    "name": "Ciprofloxacin_77",
+    "price": 184.86
+  },
+  {
+    "name": "Losartan_78",
+    "price": 474.16
+  },
+  {
+    "name": "Domperidone_79",
+    "price": 171.45
+  },
+  {
+    "name": "Amlodipine_80",
+    "price": 119.14
+  },
+  {
+    "name": "Levothyroxine_81",
+    "price": 417.13
+  },
+  {
+    "name": "Metformin_82",
+    "price": 332.92
+  },
+  {
+    "name": "Tramadol_83",
+    "price": 75.19
+  },
+  {
+    "name": "Paracetamol_84",
+    "price": 152.24
+  },
+  {
+    "name": "Salbutamol_85",
+    "price": 52.29
+  },
+  {
+    "name": "Ibuprofen_86",
+    "price": 281.65
+  },
+  {
+    "name": "Losartan_87",
+    "price": 256.7
+  },
+  {
+    "name": "Fluconazole_88",
+    "price": 125.15
+  },
+  {
+    "name": "Simvastatin_89",
+    "price": 244.94
+  },
+  {
+    "name": "Ranitidine_90",
+    "price": 286.04
+  },
+  {
+    "name": "Domperidone_91",
+    "price": 134.17
+  },
+  {
+    "name": "Sertraline_92",
+    "price": 421.65
+  },
+  {
+    "name": "Pantoprazole_93",
+    "price": 24.98
+  },
+  {
+    "name": "Metformin_94",
+    "price": 10.23
+  },
+  {
+    "name": "Cefixime_95",
+    "price": 229.6
+  },
+  {
+    "name": "Sertraline_96",
+    "price": 255.22
+  },
+  {
+    "name": "Losartan_97",
+    "price": 297.24
+  },
+  {
+    "name": "Diclofenac_98",
+    "price": 264.58
+  },
+  {
+    "name": "Amlodipine_99",
+    "price": 68.9
+  },
+  {
+    "name": "Tramadol_100",
+    "price": 166.59
+  },
+  {
+    "name": "Lisinopril_101",
+    "price": 294.07
+  },
+  {
+    "name": "Pantoprazole_102",
+    "price": 45.81
+  },
+  {
+    "name": "Sertraline_103",
+    "price": 133.4
+  },
+  {
+    "name": "Diclofenac_104",
+    "price": 157.92
+  },
+  {
+    "name": "Tramadol_105",
+    "price": 109.54
+  },
+  {
+    "name": "Domperidone_106",
+    "price": 66.04
+  },
+  {
+    "name": "Losartan_107",
+    "price": 415.3
+  },
+  {
+    "name": "Atorvastatin_108",
+    "price": 195.21
+  },
+  {
+    "name": "Simvastatin_109",
+    "price": 38.93
+  },
+  {
+    "name": "Cefixime_110",
+    "price": 311.6
+  },
+  {
+    "name": "Sertraline_111",
+    "price": 423.23
+  },
+  {
+    "name": "Amlodipine_112",
+    "price": 325.35
+  },
+  {
+    "name": "Omeprazole_113",
+    "price": 448.45
+  },
+  {
+    "name": "Sertraline_114",
+    "price": 166.3
+  },
+  {
+    "name": "Metformin_115",
+    "price": 344.72
+  },
+  {
+    "name": "Lisinopril_116",
+    "price": 322.58
+  },
+  {
+    "name": "Metoprolol_117",
+    "price": 365.6
+  },
+  {
+    "name": "Pantoprazole_118",
+    "price": 237.87
+  },
+  {
+    "name": "Tramadol_119",
+    "price": 105.73
+  },
+  {
+    "name": "Clopidogrel_120",
+    "price": 228.87
+  },
+  {
+    "name": "Gabapentin_121",
+    "price": 429.18
+  },
+  {
+    "name": "Lisinopril_122",
+    "price": 77.07
+  },
+  {
+    "name": "Hydrochlorothiazide_123",
+    "price": 323.2
+  },
+  {
+    "name": "Furosemide_124",
+    "price": 389.29
+  },
+  {
+    "name": "Clopidogrel_125",
+    "price": 393.1
+  },
+  {
+    "name": "Atorvastatin_126",
+    "price": 77.05
+  },
+  {
+    "name": "Cefixime_127",
+    "price": 367.06
+  },
+  {
+    "name": "Ciprofloxacin_128",
+    "price": 366.56
+  },
+  {
+    "name": "Fluconazole_129",
+    "price": 42.43
+  },
+  {
+    "name": "Omeprazole_130",
+    "price": 420.31
+  },
+  {
+    "name": "Pantoprazole_131",
+    "price": 177.03
+  },
+  {
+    "name": "Cetirizine_132",
+    "price": 346.19
+  },
+  {
+    "name": "Cetirizine_133",
+    "price": 33.87
+  },
+  {
+    "name": "Prednisone_134",
+    "price": 404.46
+  },
+  {
+    "name": "Amlodipine_135",
+    "price": 292.72
+  },
+  {
+    "name": "Salbutamol_136",
+    "price": 40.08
+  },
+  {
+    "name": "Tramadol_137",
+    "price": 436.5
+  },
+  {
+    "name": "Domperidone_138",
+    "price": 484.65
+  },
+  {
+    "name": "Hydrochlorothiazide_139",
+    "price": 374.65
+  },
+  {
+    "name": "Ibuprofen_140",
+    "price": 161.0
+  },
+  {
+    "name": "Domperidone_141",
+    "price": 156.51
+  },
+  {
+    "name": "Tramadol_142",
+    "price": 212.69
+  },
+  {
+    "name": "Amlodipine_143",
+    "price": 269.99
+  },
+  {
+    "name": "Prednisone_144",
+    "price": 156.0
+  },
+  {
+    "name": "Salbutamol_145",
+    "price": 357.11
+  },
+  {
+    "name": "Prednisone_146",
+    "price": 316.9
+  },
+  {
+    "name": "Clopidogrel_147",
+    "price": 446.93
+  },
+  {
+    "name": "Cetirizine_148",
+    "price": 28.16
+  },
+  {
+    "name": "Tramadol_149",
+    "price": 471.13
+  },
+  {
+    "name": "Hydrochlorothiazide_150",
+    "price": 130.56
+  },
+  {
+    "name": "Domperidone_151",
+    "price": 355.27
+  },
+  {
+    "name": "Domperidone_152",
+    "price": 114.79
+  },
+  {
+    "name": "Hydrochlorothiazide_153",
+    "price": 199.17
+  },
+  {
+    "name": "Azithromycin_154",
+    "price": 120.21
+  },
+  {
+    "name": "Metformin_155",
+    "price": 198.38
+  },
+  {
+    "name": "Atorvastatin_156",
+    "price": 151.63
+  },
+  {
+    "name": "Levothyroxine_157",
+    "price": 190.26
+  },
+  {
+    "name": "Prednisone_158",
+    "price": 186.39
+  },
+  {
+    "name": "Amoxicillin_159",
+    "price": 283.97
+  },
+  {
+    "name": "Simvastatin_160",
+    "price": 338.5
+  },
+  {
+    "name": "Metformin_161",
+    "price": 331.97
+  },
+  {
+    "name": "Amlodipine_162",
+    "price": 348.15
+  },
+  {
+    "name": "Ibuprofen_163",
+    "price": 451.93
+  },
+  {
+    "name": "Amoxicillin_164",
+    "price": 471.49
+  },
+  {
+    "name": "Salbutamol_165",
+    "price": 83.53
+  },
+  {
+    "name": "Diclofenac_166",
+    "price": 359.62
+  },
+  {
+    "name": "Clopidogrel_167",
+    "price": 497.55
+  },
+  {
+    "name": "Tramadol_168",
+    "price": 260.71
+  },
+  {
+    "name": "Gabapentin_169",
+    "price": 368.01
+  },
+  {
+    "name": "Metformin_170",
+    "price": 436.41
+  },
+  {
+    "name": "Amoxicillin_171",
+    "price": 142.36
+  },
+  {
+    "name": "Tramadol_172",
+    "price": 444.39
+  },
+  {
+    "name": "Tramadol_173",
+    "price": 207.02
+  },
+  {
+    "name": "Diclofenac_174",
+    "price": 172.17
+  },
+  {
+    "name": "Tramadol_175",
+    "price": 162.43
+  },
+  {
+    "name": "Simvastatin_176",
+    "price": 12.24
+  },
+  {
+    "name": "Ranitidine_177",
+    "price": 396.45
+  },
+  {
+    "name": "Levothyroxine_178",
+    "price": 355.87
+  },
+  {
+    "name": "Omeprazole_179",
+    "price": 368.16
+  },
+  {
+    "name": "Hydrochlorothiazide_180",
+    "price": 83.52
+  },
+  {
+    "name": "Metoprolol_181",
+    "price": 90.78
+  },
+  {
+    "name": "Azithromycin_182",
+    "price": 90.88
+  },
+  {
+    "name": "Diclofenac_183",
+    "price": 185.79
+  },
+  {
+    "name": "Lisinopril_184",
+    "price": 93.79
+  },
+  {
+    "name": "Atorvastatin_185",
+    "price": 63.82
+  },
+  {
+    "name": "Amoxicillin_186",
+    "price": 393.66
+  },
+  {
+    "name": "Fluconazole_187",
+    "price": 255.84
+  },
+  {
+    "name": "Tramadol_188",
+    "price": 61.57
+  },
+  {
+    "name": "Sertraline_189",
+    "price": 235.4
+  },
+  {
+    "name": "Fluconazole_190",
+    "price": 211.31
+  },
+  {
+    "name": "Ibuprofen_191",
+    "price": 108.56
+  },
+  {
+    "name": "Doxycycline_192",
+    "price": 283.28
+  },
+  {
+    "name": "Sertraline_193",
+    "price": 467.91
+  },
+  {
+    "name": "Lisinopril_194",
+    "price": 421.81
+  },
+  {
+    "name": "Sertraline_195",
+    "price": 166.25
+  },
+  {
+    "name": "Simvastatin_196",
+    "price": 481.5
+  },
+  {
+    "name": "Lisinopril_197",
+    "price": 314.01
+  },
+  {
+    "name": "Levothyroxine_198",
+    "price": 64.59
+  },
+  {
+    "name": "Lisinopril_199",
+    "price": 417.77
+  },
+  {
+    "name": "Metformin_200",
+    "price": 435.05
+  },
+  {
+    "name": "Paracetamol_201",
+    "price": 14.97
+  },
+  {
+    "name": "Sertraline_202",
+    "price": 343.05
+  },
+  {
+    "name": "Furosemide_203",
+    "price": 296.72
+  },
+  {
+    "name": "Ranitidine_204",
+    "price": 166.47
+  },
+  {
+    "name": "Ibuprofen_205",
+    "price": 466.08
+  },
+  {
+    "name": "Tramadol_206",
+    "price": 66.65
+  },
+  {
+    "name": "Losartan_207",
+    "price": 461.14
+  },
+  {
+    "name": "Amlodipine_208",
+    "price": 341.15
+  },
+  {
+    "name": "Pantoprazole_209",
+    "price": 343.56
+  },
+  {
+    "name": "Pantoprazole_210",
+    "price": 379.34
+  },
+  {
+    "name": "Diclofenac_211",
+    "price": 323.27
+  },
+  {
+    "name": "Pantoprazole_212",
+    "price": 450.29
+  },
+  {
+    "name": "Amoxicillin_213",
+    "price": 102.49
+  },
+  {
+    "name": "Simvastatin_214",
+    "price": 34.84
+  },
+  {
+    "name": "Prednisone_215",
+    "price": 414.83
+  },
+  {
+    "name": "Cefixime_216",
+    "price": 409.4
+  },
+  {
+    "name": "Clopidogrel_217",
+    "price": 77.19
+  },
+  {
+    "name": "Levothyroxine_218",
+    "price": 98.02
+  },
+  {
+    "name": "Paracetamol_219",
+    "price": 465.97
+  },
+  {
+    "name": "Tramadol_220",
+    "price": 116.47
+  },
+  {
+    "name": "Simvastatin_221",
+    "price": 417.74
+  },
+  {
+    "name": "Domperidone_222",
+    "price": 71.99
+  },
+  {
+    "name": "Cetirizine_223",
+    "price": 128.94
+  },
+  {
+    "name": "Ibuprofen_224",
+    "price": 98.67
+  },
+  {
+    "name": "Hydrochlorothiazide_225",
+    "price": 65.86
+  },
+  {
+    "name": "Paracetamol_226",
+    "price": 193.8
+  },
+  {
+    "name": "Domperidone_227",
+    "price": 488.79
+  },
+  {
+    "name": "Doxycycline_228",
+    "price": 162.47
+  },
+  {
+    "name": "Domperidone_229",
+    "price": 373.9
+  },
+  {
+    "name": "Tramadol_230",
+    "price": 380.33
+  },
+  {
+    "name": "Atorvastatin_231",
+    "price": 29.6
+  },
+  {
+    "name": "Amoxicillin_232",
+    "price": 88.46
+  },
+  {
+    "name": "Omeprazole_233",
+    "price": 240.13
+  },
+  {
+    "name": "Tramadol_234",
+    "price": 25.27
+  },
+  {
+    "name": "Amoxicillin_235",
+    "price": 187.17
+  },
+  {
+    "name": "Prednisone_236",
+    "price": 370.02
+  },
+  {
+    "name": "Furosemide_237",
+    "price": 495.12
+  },
+  {
+    "name": "Pantoprazole_238",
+    "price": 269.21
+  },
+  {
+    "name": "Pantoprazole_239",
+    "price": 336.23
+  },
+  {
+    "name": "Doxycycline_240",
+    "price": 11.62
+  },
+  {
+    "name": "Amlodipine_241",
+    "price": 90.28
+  },
+  {
+    "name": "Cefixime_242",
+    "price": 484.84
+  },
+  {
+    "name": "Amoxicillin_243",
+    "price": 354.85
+  },
+  {
+    "name": "Sertraline_244",
+    "price": 105.59
+  },
+  {
+    "name": "Clopidogrel_245",
+    "price": 98.98
+  },
+  {
+    "name": "Simvastatin_246",
+    "price": 426.62
+  },
+  {
+    "name": "Clopidogrel_247",
+    "price": 200.36
+  },
+  {
+    "name": "Metoprolol_248",
+    "price": 407.63
+  },
+  {
+    "name": "Fluconazole_249",
+    "price": 424.15
+  },
+  {
+    "name": "Domperidone_250",
+    "price": 351.6
+  },
+  {
+    "name": "Pantoprazole_251",
+    "price": 358.39
+  },
+  {
+    "name": "Ranitidine_252",
+    "price": 309.64
+  },
+  {
+    "name": "Salbutamol_253",
+    "price": 64.38
+  },
+  {
+    "name": "Prednisone_254",
+    "price": 212.76
+  },
+  {
+    "name": "Doxycycline_255",
+    "price": 11.31
+  },
+  {
+    "name": "Doxycycline_256",
+    "price": 247.29
+  },
+  {
+    "name": "Tramadol_257",
+    "price": 160.02
+  },
+  {
+    "name": "Tramadol_258",
+    "price": 235.69
+  },
+  {
+    "name": "Lisinopril_259",
+    "price": 313.68
+  },
+  {
+    "name": "Doxycycline_260",
+    "price": 84.88
+  },
+  {
+    "name": "Paracetamol_261",
+    "price": 91.95
+  },
+  {
+    "name": "Prednisone_262",
+    "price": 132.76
+  },
+  {
+    "name": "Lisinopril_263",
+    "price": 361.73
+  },
+  {
+    "name": "Metoprolol_264",
+    "price": 137.12
+  },
+  {
+    "name": "Diclofenac_265",
+    "price": 62.62
+  },
+  {
+    "name": "Levothyroxine_266",
+    "price": 283.2
+  },
+  {
+    "name": "Paracetamol_267",
+    "price": 241.28
+  },
+  {
+    "name": "Ibuprofen_268",
+    "price": 160.41
+  },
+  {
+    "name": "Fluconazole_269",
+    "price": 447.51
+  },
+  {
+    "name": "Ciprofloxacin_270",
+    "price": 407.44
+  },
+  {
+    "name": "Salbutamol_271",
+    "price": 157.81
+  },
+  {
+    "name": "Hydrochlorothiazide_272",
+    "price": 329.37
+  },
+  {
+    "name": "Domperidone_273",
+    "price": 263.25
+  },
+  {
+    "name": "Losartan_274",
+    "price": 126.07
+  },
+  {
+    "name": "Losartan_275",
+    "price": 113.6
+  },
+  {
+    "name": "Amlodipine_276",
+    "price": 116.13
+  },
+  {
+    "name": "Azithromycin_277",
+    "price": 28.14
+  },
+  {
+    "name": "Amoxicillin_278",
+    "price": 359.78
+  },
+  {
+    "name": "Ciprofloxacin_279",
+    "price": 203.62
+  },
+  {
+    "name": "Ciprofloxacin_280",
+    "price": 393.57
+  },
+  {
+    "name": "Metformin_281",
+    "price": 33.25
+  },
+  {
+    "name": "Ibuprofen_282",
+    "price": 116.93
+  },
+  {
+    "name": "Ciprofloxacin_283",
+    "price": 447.15
+  },
+  {
+    "name": "Ibuprofen_284",
+    "price": 42.35
+  },
+  {
+    "name": "Tramadol_285",
+    "price": 264.03
+  },
+  {
+    "name": "Gabapentin_286",
+    "price": 97.15
+  },
+  {
+    "name": "Fluconazole_287",
+    "price": 474.48
+  },
+  {
+    "name": "Hydrochlorothiazide_288",
+    "price": 88.39
+  },
+  {
+    "name": "Diclofenac_289",
+    "price": 241.07
+  },
+  {
+    "name": "Hydrochlorothiazide_290",
+    "price": 425.49
+  },
+  {
+    "name": "Amlodipine_291",
+    "price": 199.7
+  },
+  {
+    "name": "Fluconazole_292",
+    "price": 47.54
+  },
+  {
+    "name": "Doxycycline_293",
+    "price": 344.43
+  },
+  {
+    "name": "Diclofenac_294",
+    "price": 100.89
+  },
+  {
+    "name": "Diclofenac_295",
+    "price": 186.37
+  },
+  {
+    "name": "Sertraline_296",
+    "price": 401.75
+  },
+  {
+    "name": "Hydrochlorothiazide_297",
+    "price": 403.69
+  },
+  {
+    "name": "Losartan_298",
+    "price": 205.19
+  },
+  {
+    "name": "Lisinopril_299",
+    "price": 257.67
+  },
+  {
+    "name": "Cetirizine_300",
+    "price": 239.8
+  },
+  {
+    "name": "Simvastatin_301",
+    "price": 204.92
+  },
+  {
+    "name": "Cefixime_302",
+    "price": 270.81
+  },
+  {
+    "name": "Omeprazole_303",
+    "price": 277.38
+  },
+  {
+    "name": "Domperidone_304",
+    "price": 216.15
+  },
+  {
+    "name": "Ibuprofen_305",
+    "price": 168.91
+  },
+  {
+    "name": "Furosemide_306",
+    "price": 212.49
+  },
+  {
+    "name": "Diclofenac_307",
+    "price": 279.87
+  },
+  {
+    "name": "Amoxicillin_308",
+    "price": 36.69
+  },
+  {
+    "name": "Hydrochlorothiazide_309",
+    "price": 51.47
+  },
+  {
+    "name": "Azithromycin_310",
+    "price": 76.0
+  },
+  {
+    "name": "Pantoprazole_311",
+    "price": 239.55
+  },
+  {
+    "name": "Levothyroxine_312",
+    "price": 183.7
+  },
+  {
+    "name": "Levothyroxine_313",
+    "price": 206.84
+  },
+  {
+    "name": "Fluconazole_314",
+    "price": 334.1
+  },
+  {
+    "name": "Tramadol_315",
+    "price": 464.34
+  },
+  {
+    "name": "Domperidone_316",
+    "price": 419.67
+  },
+  {
+    "name": "Prednisone_317",
+    "price": 293.26
+  },
+  {
+    "name": "Gabapentin_318",
+    "price": 14.59
+  },
+  {
+    "name": "Levothyroxine_319",
+    "price": 285.14
+  },
+  {
+    "name": "Tramadol_320",
+    "price": 281.35
+  },
+  {
+    "name": "Doxycycline_321",
+    "price": 26.74
+  },
+  {
+    "name": "Fluconazole_322",
+    "price": 274.58
+  },
+  {
+    "name": "Azithromycin_323",
+    "price": 434.06
+  },
+  {
+    "name": "Ranitidine_324",
+    "price": 22.23
+  },
+  {
+    "name": "Cefixime_325",
+    "price": 132.65
+  },
+  {
+    "name": "Ibuprofen_326",
+    "price": 44.22
+  },
+  {
+    "name": "Metoprolol_327",
+    "price": 374.67
+  },
+  {
+    "name": "Ciprofloxacin_328",
+    "price": 183.74
+  },
+  {
+    "name": "Metformin_329",
+    "price": 143.73
+  },
+  {
+    "name": "Sertraline_330",
+    "price": 225.33
+  },
+  {
+    "name": "Cefixime_331",
+    "price": 176.73
+  },
+  {
+    "name": "Atorvastatin_332",
+    "price": 137.51
+  },
+  {
+    "name": "Azithromycin_333",
+    "price": 83.72
+  },
+  {
+    "name": "Omeprazole_334",
+    "price": 235.71
+  },
+  {
+    "name": "Tramadol_335",
+    "price": 325.9
+  },
+  {
+    "name": "Ibuprofen_336",
+    "price": 260.08
+  },
+  {
+    "name": "Hydrochlorothiazide_337",
+    "price": 450.79
+  },
+  {
+    "name": "Paracetamol_338",
+    "price": 68.2
+  },
+  {
+    "name": "Ibuprofen_339",
+    "price": 194.78
+  },
+  {
+    "name": "Ibuprofen_340",
+    "price": 330.97
+  },
+  {
+    "name": "Salbutamol_341",
+    "price": 183.17
+  },
+  {
+    "name": "Levothyroxine_342",
+    "price": 440.97
+  },
+  {
+    "name": "Fluconazole_343",
+    "price": 265.63
+  },
+  {
+    "name": "Ranitidine_344",
+    "price": 354.85
+  },
+  {
+    "name": "Pantoprazole_345",
+    "price": 165.08
+  },
+  {
+    "name": "Levothyroxine_346",
+    "price": 221.33
+  },
+  {
+    "name": "Metformin_347",
+    "price": 398.82
+  },
+  {
+    "name": "Cetirizine_348",
+    "price": 326.95
+  },
+  {
+    "name": "Amlodipine_349",
+    "price": 430.69
+  },
+  {
+    "name": "Hydrochlorothiazide_350",
+    "price": 221.21
+  },
+  {
+    "name": "Amoxicillin_351",
+    "price": 449.36
+  },
+  {
+    "name": "Sertraline_352",
+    "price": 372.42
+  },
+  {
+    "name": "Domperidone_353",
+    "price": 393.79
+  },
+  {
+    "name": "Prednisone_354",
+    "price": 310.03
+  },
+  {
+    "name": "Domperidone_355",
+    "price": 398.17
+  },
+  {
+    "name": "Ranitidine_356",
+    "price": 366.74
+  },
+  {
+    "name": "Hydrochlorothiazide_357",
+    "price": 145.87
+  },
+  {
+    "name": "Ranitidine_358",
+    "price": 476.91
+  },
+  {
+    "name": "Levothyroxine_359",
+    "price": 477.16
+  },
+  {
+    "name": "Cetirizine_360",
+    "price": 308.6
+  },
+  {
+    "name": "Amlodipine_361",
+    "price": 184.44
+  },
+  {
+    "name": "Clopidogrel_362",
+    "price": 368.06
+  },
+  {
+    "name": "Fluconazole_363",
+    "price": 476.72
+  },
+  {
+    "name": "Ciprofloxacin_364",
+    "price": 286.72
+  },
+  {
+    "name": "Tramadol_365",
+    "price": 303.82
+  },
+  {
+    "name": "Metformin_366",
+    "price": 148.08
+  },
+  {
+    "name": "Furosemide_367",
+    "price": 473.53
+  },
+  {
+    "name": "Domperidone_368",
+    "price": 444.66
+  },
+  {
+    "name": "Hydrochlorothiazide_369",
+    "price": 70.01
+  },
+  {
+    "name": "Gabapentin_370",
+    "price": 362.7
+  },
+  {
+    "name": "Metformin_371",
+    "price": 210.39
+  },
+  {
+    "name": "Atorvastatin_372",
+    "price": 158.59
+  },
+  {
+    "name": "Losartan_373",
+    "price": 436.96
+  },
+  {
+    "name": "Lisinopril_374",
+    "price": 490.86
+  },
+  {
+    "name": "Losartan_375",
+    "price": 387.79
+  },
+  {
+    "name": "Furosemide_376",
+    "price": 350.0
+  },
+  {
+    "name": "Doxycycline_377",
+    "price": 242.4
+  },
+  {
+    "name": "Prednisone_378",
+    "price": 186.4
+  },
+  {
+    "name": "Ibuprofen_379",
+    "price": 375.04
+  },
+  {
+    "name": "Metoprolol_380",
+    "price": 400.05
+  },
+  {
+    "name": "Amoxicillin_381",
+    "price": 52.35
+  },
+  {
+    "name": "Atorvastatin_382",
+    "price": 382.15
+  },
+  {
+    "name": "Paracetamol_383",
+    "price": 331.97
+  },
+  {
+    "name": "Ibuprofen_384",
+    "price": 373.15
+  },
+  {
+    "name": "Atorvastatin_385",
+    "price": 489.91
+  },
+  {
+    "name": "Salbutamol_386",
+    "price": 57.23
+  },
+  {
+    "name": "Simvastatin_387",
+    "price": 22.27
+  },
+  {
+    "name": "Simvastatin_388",
+    "price": 56.31
+  },
+  {
+    "name": "Clopidogrel_389",
+    "price": 347.49
+  },
+  {
+    "name": "Clopidogrel_390",
+    "price": 34.31
+  },
+  {
+    "name": "Clopidogrel_391",
+    "price": 318.93
+  },
+  {
+    "name": "Tramadol_392",
+    "price": 184.13
+  },
+  {
+    "name": "Metoprolol_393",
+    "price": 77.0
+  },
+  {
+    "name": "Clopidogrel_394",
+    "price": 126.03
+  },
+  {
+    "name": "Simvastatin_395",
+    "price": 338.21
+  },
+  {
+    "name": "Furosemide_396",
+    "price": 426.78
+  },
+  {
+    "name": "Metformin_397",
+    "price": 138.25
+  },
+  {
+    "name": "Amoxicillin_398",
+    "price": 307.56
+  },
+  {
+    "name": "Gabapentin_399",
+    "price": 450.63
+  },
+  {
+    "name": "Salbutamol_400",
+    "price": 478.34
+  },
+  {
+    "name": "Domperidone_401",
+    "price": 433.45
+  },
+  {
+    "name": "Domperidone_402",
+    "price": 84.77
+  },
+  {
+    "name": "Amoxicillin_403",
+    "price": 186.09
+  },
+  {
+    "name": "Losartan_404",
+    "price": 235.07
+  },
+  {
+    "name": "Gabapentin_405",
+    "price": 93.89
+  },
+  {
+    "name": "Ibuprofen_406",
+    "price": 42.29
+  },
+  {
+    "name": "Diclofenac_407",
+    "price": 271.43
+  },
+  {
+    "name": "Hydrochlorothiazide_408",
+    "price": 195.17
+  },
+  {
+    "name": "Tramadol_409",
+    "price": 165.0
+  },
+  {
+    "name": "Furosemide_410",
+    "price": 413.62
+  },
+  {
+    "name": "Cefixime_411",
+    "price": 483.29
+  },
+  {
+    "name": "Gabapentin_412",
+    "price": 177.66
+  },
+  {
+    "name": "Cefixime_413",
+    "price": 414.25
+  },
+  {
+    "name": "Ibuprofen_414",
+    "price": 169.72
+  },
+  {
+    "name": "Atorvastatin_415",
+    "price": 97.83
+  },
+  {
+    "name": "Paracetamol_416",
+    "price": 82.17
+  },
+  {
+    "name": "Atorvastatin_417",
+    "price": 258.06
+  },
+  {
+    "name": "Ranitidine_418",
+    "price": 131.52
+  },
+  {
+    "name": "Domperidone_419",
+    "price": 102.85
+  },
+  {
+    "name": "Omeprazole_420",
+    "price": 148.85
+  },
+  {
+    "name": "Gabapentin_421",
+    "price": 344.62
+  },
+  {
+    "name": "Gabapentin_422",
+    "price": 341.01
+  },
+  {
+    "name": "Levothyroxine_423",
+    "price": 190.23
+  },
+  {
+    "name": "Amlodipine_424",
+    "price": 111.51
+  },
+  {
+    "name": "Ibuprofen_425",
+    "price": 453.21
+  },
+  {
+    "name": "Metformin_426",
+    "price": 293.96
+  },
+  {
+    "name": "Levothyroxine_427",
+    "price": 450.66
+  },
+  {
+    "name": "Pantoprazole_428",
+    "price": 112.98
+  },
+  {
+    "name": "Tramadol_429",
+    "price": 22.95
+  },
+  {
+    "name": "Metformin_430",
+    "price": 100.69
+  },
+  {
+    "name": "Fluconazole_431",
+    "price": 40.64
+  },
+  {
+    "name": "Ciprofloxacin_432",
+    "price": 383.61
+  },
+  {
+    "name": "Amlodipine_433",
+    "price": 321.63
+  },
+  {
+    "name": "Amlodipine_434",
+    "price": 63.58
+  },
+  {
+    "name": "Ibuprofen_435",
+    "price": 23.17
+  },
+  {
+    "name": "Pantoprazole_436",
+    "price": 333.09
+  },
+  {
+    "name": "Ibuprofen_437",
+    "price": 386.83
+  },
+  {
+    "name": "Clopidogrel_438",
+    "price": 387.99
+  },
+  {
+    "name": "Tramadol_439",
+    "price": 138.34
+  },
+  {
+    "name": "Ibuprofen_440",
+    "price": 354.63
+  },
+  {
+    "name": "Amoxicillin_441",
+    "price": 101.98
+  },
+  {
+    "name": "Paracetamol_442",
+    "price": 383.2
+  },
+  {
+    "name": "Paracetamol_443",
+    "price": 427.1
+  },
+  {
+    "name": "Furosemide_444",
+    "price": 18.23
+  },
+  {
+    "name": "Sertraline_445",
+    "price": 435.74
+  },
+  {
+    "name": "Ranitidine_446",
+    "price": 389.28
+  },
+  {
+    "name": "Pantoprazole_447",
+    "price": 379.39
+  },
+  {
+    "name": "Tramadol_448",
+    "price": 274.88
+  },
+  {
+    "name": "Omeprazole_449",
+    "price": 239.11
+  },
+  {
+    "name": "Clopidogrel_450",
+    "price": 478.75
+  },
+  {
+    "name": "Ranitidine_451",
+    "price": 322.36
+  },
+  {
+    "name": "Pantoprazole_452",
+    "price": 372.9
+  },
+  {
+    "name": "Doxycycline_453",
+    "price": 429.47
+  },
+  {
+    "name": "Paracetamol_454",
+    "price": 301.24
+  },
+  {
+    "name": "Omeprazole_455",
+    "price": 492.86
+  },
+  {
+    "name": "Tramadol_456",
+    "price": 59.73
+  },
+  {
+    "name": "Amoxicillin_457",
+    "price": 493.24
+  },
+  {
+    "name": "Cefixime_458",
+    "price": 324.08
+  },
+  {
+    "name": "Prednisone_459",
+    "price": 288.53
+  },
+  {
+    "name": "Cetirizine_460",
+    "price": 114.57
+  },
+  {
+    "name": "Domperidone_461",
+    "price": 101.23
+  },
+  {
+    "name": "Pantoprazole_462",
+    "price": 221.8
+  },
+  {
+    "name": "Cetirizine_463",
+    "price": 239.43
+  },
+  {
+    "name": "Diclofenac_464",
+    "price": 270.91
+  },
+  {
+    "name": "Diclofenac_465",
+    "price": 497.43
+  },
+  {
+    "name": "Sertraline_466",
+    "price": 261.33
+  },
+  {
+    "name": "Diclofenac_467",
+    "price": 288.2
+  },
+  {
+    "name": "Diclofenac_468",
+    "price": 240.51
+  },
+  {
+    "name": "Sertraline_469",
+    "price": 34.96
+  },
+  {
+    "name": "Levothyroxine_470",
+    "price": 386.35
+  },
+  {
+    "name": "Omeprazole_471",
+    "price": 457.13
+  },
+  {
+    "name": "Salbutamol_472",
+    "price": 15.16
+  },
+  {
+    "name": "Furosemide_473",
+    "price": 310.41
+  },
+  {
+    "name": "Azithromycin_474",
+    "price": 471.17
+  },
+  {
+    "name": "Pantoprazole_475",
+    "price": 86.26
+  },
+  {
+    "name": "Ibuprofen_476",
+    "price": 354.11
+  },
+  {
+    "name": "Pantoprazole_477",
+    "price": 265.15
+  },
+  {
+    "name": "Cetirizine_478",
+    "price": 76.84
+  },
+  {
+    "name": "Clopidogrel_479",
+    "price": 385.11
+  },
+  {
+    "name": "Paracetamol_480",
+    "price": 182.19
+  },
+  {
+    "name": "Pantoprazole_481",
+    "price": 391.95
+  },
+  {
+    "name": "Gabapentin_482",
+    "price": 320.1
+  },
+  {
+    "name": "Metoprolol_483",
+    "price": 240.6
+  },
+  {
+    "name": "Omeprazole_484",
+    "price": 281.21
+  },
+  {
+    "name": "Ranitidine_485",
+    "price": 80.14
+  },
+  {
+    "name": "Azithromycin_486",
+    "price": 92.08
+  },
+  {
+    "name": "Metoprolol_487",
+    "price": 149.32
+  },
+  {
+    "name": "Gabapentin_488",
+    "price": 432.39
+  },
+  {
+    "name": "Metoprolol_489",
+    "price": 24.54
+  },
+  {
+    "name": "Diclofenac_490",
+    "price": 278.38
+  },
+  {
+    "name": "Doxycycline_491",
+    "price": 88.31
+  },
+  {
+    "name": "Ranitidine_492",
+    "price": 187.76
+  },
+  {
+    "name": "Simvastatin_493",
+    "price": 481.24
+  },
+  {
+    "name": "Gabapentin_494",
+    "price": 329.31
+  },
+  {
+    "name": "Omeprazole_495",
+    "price": 85.4
+  },
+  {
+    "name": "Atorvastatin_496",
+    "price": 477.8
+  },
+  {
+    "name": "Omeprazole_497",
+    "price": 219.13
+  },
+  {
+    "name": "Paracetamol_498",
+    "price": 285.35
+  },
+  {
+    "name": "Metformin_499",
+    "price": 66.43
+  },
+  {
+    "name": "Prednisone_500",
+    "price": 63.72
+  },
+  {
+    "name": "Atorvastatin_501",
+    "price": 249.74
+  },
+  {
+    "name": "Azithromycin_502",
+    "price": 219.7
+  },
+  {
+    "name": "Cefixime_503",
+    "price": 51.59
+  },
+  {
+    "name": "Azithromycin_504",
+    "price": 80.32
+  },
+  {
+    "name": "Cetirizine_505",
+    "price": 362.92
+  },
+  {
+    "name": "Hydrochlorothiazide_506",
+    "price": 278.83
+  },
+  {
+    "name": "Atorvastatin_507",
+    "price": 91.61
+  },
+  {
+    "name": "Ciprofloxacin_508",
+    "price": 397.18
+  },
+  {
+    "name": "Clopidogrel_509",
+    "price": 232.34
+  },
+  {
+    "name": "Pantoprazole_510",
+    "price": 98.85
+  },
+  {
+    "name": "Diclofenac_511",
+    "price": 319.87
+  },
+  {
+    "name": "Amlodipine_512",
+    "price": 193.39
+  },
+  {
+    "name": "Amlodipine_513",
+    "price": 85.82
+  },
+  {
+    "name": "Atorvastatin_514",
+    "price": 376.2
+  },
+  {
+    "name": "Lisinopril_515",
+    "price": 433.79
+  },
+  {
+    "name": "Paracetamol_516",
+    "price": 289.12
+  },
+  {
+    "name": "Amlodipine_517",
+    "price": 235.69
+  },
+  {
+    "name": "Gabapentin_518",
+    "price": 163.37
+  },
+  {
+    "name": "Tramadol_519",
+    "price": 94.13
+  },
+  {
+    "name": "Ciprofloxacin_520",
+    "price": 265.49
+  },
+  {
+    "name": "Ibuprofen_521",
+    "price": 56.1
+  },
+  {
+    "name": "Cefixime_522",
+    "price": 460.84
+  },
+  {
+    "name": "Levothyroxine_523",
+    "price": 209.81
+  },
+  {
+    "name": "Metformin_524",
+    "price": 101.41
+  },
+  {
+    "name": "Azithromycin_525",
+    "price": 475.29
+  },
+  {
+    "name": "Losartan_526",
+    "price": 313.72
+  },
+  {
+    "name": "Metformin_527",
+    "price": 246.2
+  },
+  {
+    "name": "Simvastatin_528",
+    "price": 427.23
+  },
+  {
+    "name": "Furosemide_529",
+    "price": 62.68
+  },
+  {
+    "name": "Cetirizine_530",
+    "price": 374.11
+  },
+  {
+    "name": "Ranitidine_531",
+    "price": 88.32
+  },
+  {
+    "name": "Metformin_532",
+    "price": 447.1
+  },
+  {
+    "name": "Domperidone_533",
+    "price": 410.05
+  },
+  {
+    "name": "Atorvastatin_534",
+    "price": 203.28
+  },
+  {
+    "name": "Losartan_535",
+    "price": 239.29
+  },
+  {
+    "name": "Pantoprazole_536",
+    "price": 393.63
+  },
+  {
+    "name": "Fluconazole_537",
+    "price": 259.8
+  },
+  {
+    "name": "Levothyroxine_538",
+    "price": 475.79
+  },
+  {
+    "name": "Ciprofloxacin_539",
+    "price": 129.58
+  },
+  {
+    "name": "Cefixime_540",
+    "price": 94.19
+  },
+  {
+    "name": "Cetirizine_541",
+    "price": 297.33
+  },
+  {
+    "name": "Sertraline_542",
+    "price": 63.05
+  },
+  {
+    "name": "Ciprofloxacin_543",
+    "price": 169.31
+  },
+  {
+    "name": "Cefixime_544",
+    "price": 59.96
+  },
+  {
+    "name": "Amoxicillin_545",
+    "price": 105.6
+  },
+  {
+    "name": "Amlodipine_546",
+    "price": 65.08
+  },
+  {
+    "name": "Domperidone_547",
+    "price": 44.99
+  },
+  {
+    "name": "Lisinopril_548",
+    "price": 128.84
+  },
+  {
+    "name": "Omeprazole_549",
+    "price": 223.99
+  },
+  {
+    "name": "Azithromycin_550",
+    "price": 19.8
+  },
+  {
+    "name": "Cefixime_551",
+    "price": 439.51
+  },
+  {
+    "name": "Fluconazole_552",
+    "price": 327.51
+  },
+  {
+    "name": "Azithromycin_553",
+    "price": 228.16
+  },
+  {
+    "name": "Domperidone_554",
+    "price": 355.43
+  },
+  {
+    "name": "Atorvastatin_555",
+    "price": 187.97
+  },
+  {
+    "name": "Tramadol_556",
+    "price": 43.55
+  },
+  {
+    "name": "Azithromycin_557",
+    "price": 40.34
+  },
+  {
+    "name": "Ranitidine_558",
+    "price": 332.84
+  },
+  {
+    "name": "Salbutamol_559",
+    "price": 442.88
+  },
+  {
+    "name": "Domperidone_560",
+    "price": 195.65
+  },
+  {
+    "name": "Levothyroxine_561",
+    "price": 155.98
+  },
+  {
+    "name": "Losartan_562",
+    "price": 192.93
+  },
+  {
+    "name": "Hydrochlorothiazide_563",
+    "price": 265.89
+  },
+  {
+    "name": "Hydrochlorothiazide_564",
+    "price": 435.71
+  },
+  {
+    "name": "Prednisone_565",
+    "price": 58.19
+  },
+  {
+    "name": "Amlodipine_566",
+    "price": 320.96
+  },
+  {
+    "name": "Paracetamol_567",
+    "price": 299.56
+  },
+  {
+    "name": "Clopidogrel_568",
+    "price": 229.5
+  },
+  {
+    "name": "Losartan_569",
+    "price": 86.8
+  },
+  {
+    "name": "Diclofenac_570",
+    "price": 202.03
+  },
+  {
+    "name": "Gabapentin_571",
+    "price": 360.22
+  },
+  {
+    "name": "Atorvastatin_572",
+    "price": 490.98
+  },
+  {
+    "name": "Ciprofloxacin_573",
+    "price": 197.99
+  },
+  {
+    "name": "Losartan_574",
+    "price": 471.02
+  },
+  {
+    "name": "Pantoprazole_575",
+    "price": 484.08
+  },
+  {
+    "name": "Ciprofloxacin_576",
+    "price": 351.46
+  },
+  {
+    "name": "Simvastatin_577",
+    "price": 394.03
+  },
+  {
+    "name": "Diclofenac_578",
+    "price": 376.03
+  },
+  {
+    "name": "Azithromycin_579",
+    "price": 107.24
+  },
+  {
+    "name": "Ranitidine_580",
+    "price": 435.83
+  },
+  {
+    "name": "Azithromycin_581",
+    "price": 452.25
+  },
+  {
+    "name": "Cetirizine_582",
+    "price": 23.24
+  },
+  {
+    "name": "Omeprazole_583",
+    "price": 154.13
+  },
+  {
+    "name": "Sertraline_584",
+    "price": 243.73
+  },
+  {
+    "name": "Ibuprofen_585",
+    "price": 323.47
+  },
+  {
+    "name": "Ciprofloxacin_586",
+    "price": 109.66
+  },
+  {
+    "name": "Diclofenac_587",
+    "price": 234.82
+  },
+  {
+    "name": "Salbutamol_588",
+    "price": 89.0
+  },
+  {
+    "name": "Ciprofloxacin_589",
+    "price": 437.95
+  },
+  {
+    "name": "Diclofenac_590",
+    "price": 309.42
+  },
+  {
+    "name": "Omeprazole_591",
+    "price": 400.77
+  },
+  {
+    "name": "Tramadol_592",
+    "price": 313.92
+  },
+  {
+    "name": "Simvastatin_593",
+    "price": 402.73
+  },
+  {
+    "name": "Amoxicillin_594",
+    "price": 17.53
+  },
+  {
+    "name": "Fluconazole_595",
+    "price": 173.26
+  },
+  {
+    "name": "Simvastatin_596",
+    "price": 95.46
+  },
+  {
+    "name": "Paracetamol_597",
+    "price": 44.59
+  },
+  {
+    "name": "Atorvastatin_598",
+    "price": 175.55
+  },
+  {
+    "name": "Furosemide_599",
+    "price": 460.43
+  },
+  {
+    "name": "Ibuprofen_600",
+    "price": 144.44
+  },
+  {
+    "name": "Levothyroxine_601",
+    "price": 150.99
+  },
+  {
+    "name": "Fluconazole_602",
+    "price": 263.3
+  },
+  {
+    "name": "Pantoprazole_603",
+    "price": 485.08
+  },
+  {
+    "name": "Ranitidine_604",
+    "price": 226.79
+  },
+  {
+    "name": "Sertraline_605",
+    "price": 313.09
+  },
+  {
+    "name": "Clopidogrel_606",
+    "price": 463.25
+  },
+  {
+    "name": "Diclofenac_607",
+    "price": 156.66
+  },
+  {
+    "name": "Domperidone_608",
+    "price": 147.69
+  },
+  {
+    "name": "Simvastatin_609",
+    "price": 195.48
+  },
+  {
+    "name": "Metoprolol_610",
+    "price": 253.56
+  },
+  {
+    "name": "Simvastatin_611",
+    "price": 380.13
+  },
+  {
+    "name": "Sertraline_612",
+    "price": 344.51
+  },
+  {
+    "name": "Lisinopril_613",
+    "price": 71.05
+  },
+  {
+    "name": "Cefixime_614",
+    "price": 144.03
+  },
+  {
+    "name": "Fluconazole_615",
+    "price": 156.28
+  },
+  {
+    "name": "Cetirizine_616",
+    "price": 299.65
+  },
+  {
+    "name": "Pantoprazole_617",
+    "price": 201.59
+  },
+  {
+    "name": "Diclofenac_618",
+    "price": 388.14
+  },
+  {
+    "name": "Amoxicillin_619",
+    "price": 496.98
+  },
+  {
+    "name": "Ciprofloxacin_620",
+    "price": 443.72
+  },
+  {
+    "name": "Tramadol_621",
+    "price": 235.09
+  },
+  {
+    "name": "Azithromycin_622",
+    "price": 444.86
+  },
+  {
+    "name": "Ranitidine_623",
+    "price": 339.91
+  },
+  {
+    "name": "Prednisone_624",
+    "price": 196.7
+  },
+  {
+    "name": "Metformin_625",
+    "price": 161.9
+  },
+  {
+    "name": "Simvastatin_626",
+    "price": 216.49
+  },
+  {
+    "name": "Clopidogrel_627",
+    "price": 105.39
+  },
+  {
+    "name": "Gabapentin_628",
+    "price": 101.18
+  },
+  {
+    "name": "Tramadol_629",
+    "price": 284.53
+  },
+  {
+    "name": "Amlodipine_630",
+    "price": 219.94
+  },
+  {
+    "name": "Ranitidine_631",
+    "price": 36.72
+  },
+  {
+    "name": "Prednisone_632",
+    "price": 349.45
+  },
+  {
+    "name": "Domperidone_633",
+    "price": 44.12
+  },
+  {
+    "name": "Salbutamol_634",
+    "price": 425.1
+  },
+  {
+    "name": "Diclofenac_635",
+    "price": 341.43
+  },
+  {
+    "name": "Losartan_636",
+    "price": 241.87
+  },
+  {
+    "name": "Losartan_637",
+    "price": 164.57
+  },
+  {
+    "name": "Levothyroxine_638",
+    "price": 401.71
+  },
+  {
+    "name": "Levothyroxine_639",
+    "price": 378.66
+  },
+  {
+    "name": "Furosemide_640",
+    "price": 97.12
+  },
+  {
+    "name": "Simvastatin_641",
+    "price": 467.61
+  },
+  {
+    "name": "Lisinopril_642",
+    "price": 492.69
+  },
+  {
+    "name": "Furosemide_643",
+    "price": 123.42
+  },
+  {
+    "name": "Amlodipine_644",
+    "price": 487.85
+  },
+  {
+    "name": "Lisinopril_645",
+    "price": 284.39
+  },
+  {
+    "name": "Furosemide_646",
+    "price": 449.06
+  },
+  {
+    "name": "Cefixime_647",
+    "price": 395.9
+  },
+  {
+    "name": "Atorvastatin_648",
+    "price": 126.05
+  },
+  {
+    "name": "Omeprazole_649",
+    "price": 138.62
+  },
+  {
+    "name": "Domperidone_650",
+    "price": 303.94
+  },
+  {
+    "name": "Gabapentin_651",
+    "price": 203.06
+  },
+  {
+    "name": "Azithromycin_652",
+    "price": 460.67
+  },
+  {
+    "name": "Ranitidine_653",
+    "price": 235.98
+  },
+  {
+    "name": "Salbutamol_654",
+    "price": 242.06
+  },
+  {
+    "name": "Metformin_655",
+    "price": 293.86
+  },
+  {
+    "name": "Cetirizine_656",
+    "price": 136.96
+  },
+  {
+    "name": "Hydrochlorothiazide_657",
+    "price": 126.31
+  },
+  {
+    "name": "Fluconazole_658",
+    "price": 269.02
+  },
+  {
+    "name": "Gabapentin_659",
+    "price": 431.06
+  },
+  {
+    "name": "Atorvastatin_660",
+    "price": 58.47
+  },
+  {
+    "name": "Ibuprofen_661",
+    "price": 350.0
+  },
+  {
+    "name": "Fluconazole_662",
+    "price": 120.96
+  },
+  {
+    "name": "Cetirizine_663",
+    "price": 327.69
+  },
+  {
+    "name": "Paracetamol_664",
+    "price": 123.89
+  },
+  {
+    "name": "Clopidogrel_665",
+    "price": 423.18
+  },
+  {
+    "name": "Omeprazole_666",
+    "price": 283.14
+  },
+  {
+    "name": "Metformin_667",
+    "price": 235.76
+  },
+  {
+    "name": "Furosemide_668",
+    "price": 236.31
+  },
+  {
+    "name": "Amoxicillin_669",
+    "price": 345.42
+  },
+  {
+    "name": "Tramadol_670",
+    "price": 305.81
+  },
+  {
+    "name": "Diclofenac_671",
+    "price": 126.41
+  },
+  {
+    "name": "Domperidone_672",
+    "price": 491.62
+  },
+  {
+    "name": "Tramadol_673",
+    "price": 122.76
+  },
+  {
+    "name": "Paracetamol_674",
+    "price": 230.96
+  },
+  {
+    "name": "Furosemide_675",
+    "price": 351.09
+  },
+  {
+    "name": "Prednisone_676",
+    "price": 310.59
+  },
+  {
+    "name": "Doxycycline_677",
+    "price": 79.11
+  },
+  {
+    "name": "Salbutamol_678",
+    "price": 234.64
+  },
+  {
+    "name": "Pantoprazole_679",
+    "price": 227.01
+  },
+  {
+    "name": "Hydrochlorothiazide_680",
+    "price": 299.01
+  },
+  {
+    "name": "Omeprazole_681",
+    "price": 36.09
+  },
+  {
+    "name": "Clopidogrel_682",
+    "price": 62.37
+  },
+  {
+    "name": "Amoxicillin_683",
+    "price": 164.05
+  },
+  {
+    "name": "Levothyroxine_684",
+    "price": 250.53
+  },
+  {
+    "name": "Losartan_685",
+    "price": 438.85
+  },
+  {
+    "name": "Lisinopril_686",
+    "price": 120.58
+  },
+  {
+    "name": "Atorvastatin_687",
+    "price": 145.49
+  },
+  {
+    "name": "Clopidogrel_688",
+    "price": 336.25
+  },
+  {
+    "name": "Salbutamol_689",
+    "price": 232.92
+  },
+  {
+    "name": "Simvastatin_690",
+    "price": 436.79
+  },
+  {
+    "name": "Azithromycin_691",
+    "price": 85.55
+  },
+  {
+    "name": "Ciprofloxacin_692",
+    "price": 477.72
+  },
+  {
+    "name": "Hydrochlorothiazide_693",
+    "price": 32.21
+  },
+  {
+    "name": "Salbutamol_694",
+    "price": 251.42
+  },
+  {
+    "name": "Metoprolol_695",
+    "price": 109.1
+  },
+  {
+    "name": "Ciprofloxacin_696",
+    "price": 436.0
+  },
+  {
+    "name": "Simvastatin_697",
+    "price": 32.29
+  },
+  {
+    "name": "Hydrochlorothiazide_698",
+    "price": 265.39
+  },
+  {
+    "name": "Sertraline_699",
+    "price": 88.59
+  },
+  {
+    "name": "Clopidogrel_700",
+    "price": 283.33
+  },
+  {
+    "name": "Furosemide_701",
+    "price": 313.29
+  },
+  {
+    "name": "Atorvastatin_702",
+    "price": 380.31
+  },
+  {
+    "name": "Tramadol_703",
+    "price": 74.48
+  },
+  {
+    "name": "Domperidone_704",
+    "price": 232.41
+  },
+  {
+    "name": "Domperidone_705",
+    "price": 100.81
+  },
+  {
+    "name": "Amoxicillin_706",
+    "price": 298.17
+  },
+  {
+    "name": "Ciprofloxacin_707",
+    "price": 93.46
+  },
+  {
+    "name": "Paracetamol_708",
+    "price": 150.46
+  },
+  {
+    "name": "Salbutamol_709",
+    "price": 240.7
+  },
+  {
+    "name": "Atorvastatin_710",
+    "price": 495.2
+  },
+  {
+    "name": "Amlodipine_711",
+    "price": 334.25
+  },
+  {
+    "name": "Ibuprofen_712",
+    "price": 242.71
+  },
+  {
+    "name": "Cefixime_713",
+    "price": 146.75
+  },
+  {
+    "name": "Levothyroxine_714",
+    "price": 372.97
+  },
+  {
+    "name": "Atorvastatin_715",
+    "price": 223.67
+  },
+  {
+    "name": "Hydrochlorothiazide_716",
+    "price": 477.68
+  },
+  {
+    "name": "Cetirizine_717",
+    "price": 409.0
+  },
+  {
+    "name": "Ibuprofen_718",
+    "price": 79.22
+  },
+  {
+    "name": "Cefixime_719",
+    "price": 488.07
+  },
+  {
+    "name": "Prednisone_720",
+    "price": 421.18
+  },
+  {
+    "name": "Pantoprazole_721",
+    "price": 302.39
+  },
+  {
+    "name": "Diclofenac_722",
+    "price": 213.02
+  },
+  {
+    "name": "Sertraline_723",
+    "price": 96.8
+  },
+  {
+    "name": "Levothyroxine_724",
+    "price": 475.93
+  },
+  {
+    "name": "Simvastatin_725",
+    "price": 121.04
+  },
+  {
+    "name": "Losartan_726",
+    "price": 325.73
+  },
+  {
+    "name": "Diclofenac_727",
+    "price": 204.67
+  },
+  {
+    "name": "Omeprazole_728",
+    "price": 359.51
+  },
+  {
+    "name": "Hydrochlorothiazide_729",
+    "price": 412.55
+  },
+  {
+    "name": "Diclofenac_730",
+    "price": 366.19
+  },
+  {
+    "name": "Cefixime_731",
+    "price": 51.29
+  },
+  {
+    "name": "Simvastatin_732",
+    "price": 383.7
+  },
+  {
+    "name": "Lisinopril_733",
+    "price": 309.91
+  },
+  {
+    "name": "Lisinopril_734",
+    "price": 395.1
+  },
+  {
+    "name": "Losartan_735",
+    "price": 496.09
+  },
+  {
+    "name": "Cetirizine_736",
+    "price": 40.69
+  },
+  {
+    "name": "Omeprazole_737",
+    "price": 470.8
+  },
+  {
+    "name": "Azithromycin_738",
+    "price": 423.62
+  },
+  {
+    "name": "Amoxicillin_739",
+    "price": 393.44
+  },
+  {
+    "name": "Amoxicillin_740",
+    "price": 485.25
+  },
+  {
+    "name": "Ranitidine_741",
+    "price": 40.68
+  },
+  {
+    "name": "Ranitidine_742",
+    "price": 450.98
+  },
+  {
+    "name": "Paracetamol_743",
+    "price": 182.69
+  },
+  {
+    "name": "Tramadol_744",
+    "price": 127.79
+  },
+  {
+    "name": "Doxycycline_745",
+    "price": 366.28
+  },
+  {
+    "name": "Omeprazole_746",
+    "price": 189.51
+  },
+  {
+    "name": "Azithromycin_747",
+    "price": 410.36
+  },
+  {
+    "name": "Tramadol_748",
+    "price": 289.87
+  },
+  {
+    "name": "Amlodipine_749",
+    "price": 293.12
+  },
+  {
+    "name": "Fluconazole_750",
+    "price": 443.99
+  },
+  {
+    "name": "Lisinopril_751",
+    "price": 115.06
+  },
+  {
+    "name": "Clopidogrel_752",
+    "price": 326.82
+  },
+  {
+    "name": "Salbutamol_753",
+    "price": 377.27
+  },
+  {
+    "name": "Paracetamol_754",
+    "price": 44.04
+  },
+  {
+    "name": "Tramadol_755",
+    "price": 74.87
+  },
+  {
+    "name": "Azithromycin_756",
+    "price": 417.08
+  },
+  {
+    "name": "Clopidogrel_757",
+    "price": 182.28
+  },
+  {
+    "name": "Tramadol_758",
+    "price": 375.88
+  },
+  {
+    "name": "Cefixime_759",
+    "price": 281.01
+  },
+  {
+    "name": "Amoxicillin_760",
+    "price": 23.31
+  },
+  {
+    "name": "Hydrochlorothiazide_761",
+    "price": 333.05
+  },
+  {
+    "name": "Salbutamol_762",
+    "price": 374.46
+  },
+  {
+    "name": "Metoprolol_763",
+    "price": 399.1
+  },
+  {
+    "name": "Ciprofloxacin_764",
+    "price": 212.51
+  },
+  {
+    "name": "Clopidogrel_765",
+    "price": 439.49
+  },
+  {
+    "name": "Furosemide_766",
+    "price": 358.15
+  },
+  {
+    "name": "Ciprofloxacin_767",
+    "price": 369.51
+  },
+  {
+    "name": "Metoprolol_768",
+    "price": 314.85
+  },
+  {
+    "name": "Amlodipine_769",
+    "price": 213.09
+  },
+  {
+    "name": "Metoprolol_770",
+    "price": 12.66
+  },
+  {
+    "name": "Ranitidine_771",
+    "price": 135.55
+  },
+  {
+    "name": "Simvastatin_772",
+    "price": 53.77
+  },
+  {
+    "name": "Furosemide_773",
+    "price": 397.09
+  },
+  {
+    "name": "Metoprolol_774",
+    "price": 65.18
+  },
+  {
+    "name": "Furosemide_775",
+    "price": 451.12
+  },
+  {
+    "name": "Metformin_776",
+    "price": 12.68
+  },
+  {
+    "name": "Fluconazole_777",
+    "price": 135.63
+  },
+  {
+    "name": "Diclofenac_778",
+    "price": 376.46
+  },
+  {
+    "name": "Prednisone_779",
+    "price": 112.29
+  },
+  {
+    "name": "Furosemide_780",
+    "price": 171.67
+  },
+  {
+    "name": "Paracetamol_781",
+    "price": 484.62
+  },
+  {
+    "name": "Metformin_782",
+    "price": 421.86
+  },
+  {
+    "name": "Prednisone_783",
+    "price": 296.35
+  },
+  {
+    "name": "Metoprolol_784",
+    "price": 441.4
+  },
+  {
+    "name": "Atorvastatin_785",
+    "price": 377.4
+  },
+  {
+    "name": "Ibuprofen_786",
+    "price": 263.14
+  },
+  {
+    "name": "Levothyroxine_787",
+    "price": 69.66
+  },
+  {
+    "name": "Lisinopril_788",
+    "price": 88.86
+  },
+  {
+    "name": "Lisinopril_789",
+    "price": 27.77
+  },
+  {
+    "name": "Cetirizine_790",
+    "price": 314.72
+  },
+  {
+    "name": "Lisinopril_791",
+    "price": 403.74
+  },
+  {
+    "name": "Paracetamol_792",
+    "price": 205.33
+  },
+  {
+    "name": "Diclofenac_793",
+    "price": 493.33
+  },
+  {
+    "name": "Fluconazole_794",
+    "price": 238.74
+  },
+  {
+    "name": "Sertraline_795",
+    "price": 212.96
+  },
+  {
+    "name": "Furosemide_796",
+    "price": 129.31
+  },
+  {
+    "name": "Pantoprazole_797",
+    "price": 307.03
+  },
+  {
+    "name": "Levothyroxine_798",
+    "price": 381.31
+  },
+  {
+    "name": "Ibuprofen_799",
+    "price": 49.21
+  },
+  {
+    "name": "Omeprazole_800",
+    "price": 84.74
+  },
+  {
+    "name": "Sertraline_801",
+    "price": 241.63
+  },
+  {
+    "name": "Doxycycline_802",
+    "price": 489.31
+  },
+  {
+    "name": "Hydrochlorothiazide_803",
+    "price": 139.2
+  },
+  {
+    "name": "Cefixime_804",
+    "price": 150.36
+  },
+  {
+    "name": "Furosemide_805",
+    "price": 344.86
+  },
+  {
+    "name": "Losartan_806",
+    "price": 349.51
+  },
+  {
+    "name": "Cefixime_807",
+    "price": 92.36
+  },
+  {
+    "name": "Furosemide_808",
+    "price": 41.11
+  },
+  {
+    "name": "Omeprazole_809",
+    "price": 465.62
+  },
+  {
+    "name": "Ibuprofen_810",
+    "price": 93.94
+  },
+  {
+    "name": "Cefixime_811",
+    "price": 329.71
+  },
+  {
+    "name": "Fluconazole_812",
+    "price": 231.79
+  },
+  {
+    "name": "Ranitidine_813",
+    "price": 10.4
+  },
+  {
+    "name": "Metformin_814",
+    "price": 247.32
+  },
+  {
+    "name": "Losartan_815",
+    "price": 496.79
+  },
+  {
+    "name": "Ciprofloxacin_816",
+    "price": 183.61
+  },
+  {
+    "name": "Levothyroxine_817",
+    "price": 90.61
+  },
+  {
+    "name": "Fluconazole_818",
+    "price": 137.38
+  },
+  {
+    "name": "Ranitidine_819",
+    "price": 387.04
+  },
+  {
+    "name": "Domperidone_820",
+    "price": 395.14
+  },
+  {
+    "name": "Azithromycin_821",
+    "price": 310.53
+  },
+  {
+    "name": "Atorvastatin_822",
+    "price": 32.19
+  },
+  {
+    "name": "Clopidogrel_823",
+    "price": 211.91
+  },
+  {
+    "name": "Furosemide_824",
+    "price": 380.96
+  },
+  {
+    "name": "Gabapentin_825",
+    "price": 146.47
+  },
+  {
+    "name": "Sertraline_826",
+    "price": 143.65
+  },
+  {
+    "name": "Losartan_827",
+    "price": 130.09
+  },
+  {
+    "name": "Omeprazole_828",
+    "price": 287.58
+  },
+  {
+    "name": "Losartan_829",
+    "price": 118.56
+  },
+  {
+    "name": "Cetirizine_830",
+    "price": 329.71
+  },
+  {
+    "name": "Domperidone_831",
+    "price": 80.41
+  },
+  {
+    "name": "Pantoprazole_832",
+    "price": 130.59
+  },
+  {
+    "name": "Simvastatin_833",
+    "price": 36.27
+  },
+  {
+    "name": "Domperidone_834",
+    "price": 256.41
+  },
+  {
+    "name": "Atorvastatin_835",
+    "price": 333.75
+  },
+  {
+    "name": "Amlodipine_836",
+    "price": 297.48
+  },
+  {
+    "name": "Gabapentin_837",
+    "price": 354.45
+  },
+  {
+    "name": "Clopidogrel_838",
+    "price": 396.26
+  },
+  {
+    "name": "Ciprofloxacin_839",
+    "price": 12.1
+  },
+  {
+    "name": "Paracetamol_840",
+    "price": 295.57
+  },
+  {
+    "name": "Azithromycin_841",
+    "price": 270.57
+  },
+  {
+    "name": "Atorvastatin_842",
+    "price": 296.64
+  },
+  {
+    "name": "Atorvastatin_843",
+    "price": 188.54
+  },
+  {
+    "name": "Levothyroxine_844",
+    "price": 302.85
+  },
+  {
+    "name": "Azithromycin_845",
+    "price": 130.29
+  },
+  {
+    "name": "Atorvastatin_846",
+    "price": 166.0
+  },
+  {
+    "name": "Cefixime_847",
+    "price": 208.08
+  },
+  {
+    "name": "Ciprofloxacin_848",
+    "price": 257.92
+  },
+  {
+    "name": "Diclofenac_849",
+    "price": 481.1
+  },
+  {
+    "name": "Furosemide_850",
+    "price": 187.65
+  },
+  {
+    "name": "Cefixime_851",
+    "price": 498.28
+  },
+  {
+    "name": "Gabapentin_852",
+    "price": 190.57
+  },
+  {
+    "name": "Salbutamol_853",
+    "price": 202.72
+  },
+  {
+    "name": "Salbutamol_854",
+    "price": 429.11
+  },
+  {
+    "name": "Doxycycline_855",
+    "price": 183.05
+  },
+  {
+    "name": "Domperidone_856",
+    "price": 80.9
+  },
+  {
+    "name": "Clopidogrel_857",
+    "price": 43.55
+  },
+  {
+    "name": "Ranitidine_858",
+    "price": 357.38
+  },
+  {
+    "name": "Atorvastatin_859",
+    "price": 17.15
+  },
+  {
+    "name": "Ciprofloxacin_860",
+    "price": 463.84
+  },
+  {
+    "name": "Losartan_861",
+    "price": 366.23
+  },
+  {
+    "name": "Salbutamol_862",
+    "price": 292.91
+  },
+  {
+    "name": "Amoxicillin_863",
+    "price": 366.02
+  },
+  {
+    "name": "Cefixime_864",
+    "price": 18.7
+  },
+  {
+    "name": "Lisinopril_865",
+    "price": 178.64
+  },
+  {
+    "name": "Amlodipine_866",
+    "price": 318.69
+  },
+  {
+    "name": "Amlodipine_867",
+    "price": 149.18
+  },
+  {
+    "name": "Azithromycin_868",
+    "price": 244.59
+  },
+  {
+    "name": "Gabapentin_869",
+    "price": 379.98
+  },
+  {
+    "name": "Paracetamol_870",
+    "price": 483.33
+  },
+  {
+    "name": "Atorvastatin_871",
+    "price": 311.22
+  },
+  {
+    "name": "Prednisone_872",
+    "price": 134.0
+  },
+  {
+    "name": "Metoprolol_873",
+    "price": 220.21
+  },
+  {
+    "name": "Cetirizine_874",
+    "price": 24.13
+  },
+  {
+    "name": "Amoxicillin_875",
+    "price": 263.84
+  },
+  {
+    "name": "Prednisone_876",
+    "price": 356.31
+  },
+  {
+    "name": "Cetirizine_877",
+    "price": 75.27
+  },
+  {
+    "name": "Metoprolol_878",
+    "price": 177.86
+  },
+  {
+    "name": "Hydrochlorothiazide_879",
+    "price": 75.61
+  },
+  {
+    "name": "Simvastatin_880",
+    "price": 149.04
+  },
+  {
+    "name": "Omeprazole_881",
+    "price": 316.46
+  },
+  {
+    "name": "Azithromycin_882",
+    "price": 85.47
+  },
+  {
+    "name": "Fluconazole_883",
+    "price": 32.24
+  },
+  {
+    "name": "Furosemide_884",
+    "price": 173.66
+  },
+  {
+    "name": "Cefixime_885",
+    "price": 63.06
+  },
+  {
+    "name": "Omeprazole_886",
+    "price": 154.69
+  },
+  {
+    "name": "Salbutamol_887",
+    "price": 386.52
+  },
+  {
+    "name": "Paracetamol_888",
+    "price": 290.28
+  },
+  {
+    "name": "Azithromycin_889",
+    "price": 360.38
+  },
+  {
+    "name": "Pantoprazole_890",
+    "price": 373.17
+  },
+  {
+    "name": "Diclofenac_891",
+    "price": 325.71
+  },
+  {
+    "name": "Paracetamol_892",
+    "price": 329.38
+  },
+  {
+    "name": "Lisinopril_893",
+    "price": 172.54
+  },
+  {
+    "name": "Doxycycline_894",
+    "price": 65.2
+  },
+  {
+    "name": "Paracetamol_895",
+    "price": 272.01
+  },
+  {
+    "name": "Doxycycline_896",
+    "price": 22.06
+  },
+  {
+    "name": "Metformin_897",
+    "price": 251.97
+  },
+  {
+    "name": "Sertraline_898",
+    "price": 318.53
+  },
+  {
+    "name": "Amoxicillin_899",
+    "price": 119.28
+  },
+  {
+    "name": "Doxycycline_900",
+    "price": 283.65
+  },
+  {
+    "name": "Amlodipine_901",
+    "price": 353.97
+  },
+  {
+    "name": "Amlodipine_902",
+    "price": 15.18
+  },
+  {
+    "name": "Diclofenac_903",
+    "price": 474.77
+  },
+  {
+    "name": "Cefixime_904",
+    "price": 239.87
+  },
+  {
+    "name": "Hydrochlorothiazide_905",
+    "price": 159.08
+  },
+  {
+    "name": "Salbutamol_906",
+    "price": 374.13
+  },
+  {
+    "name": "Hydrochlorothiazide_907",
+    "price": 261.91
+  },
+  {
+    "name": "Amoxicillin_908",
+    "price": 277.94
+  },
+  {
+    "name": "Levothyroxine_909",
+    "price": 73.69
+  },
+  {
+    "name": "Amlodipine_910",
+    "price": 136.53
+  },
+  {
+    "name": "Atorvastatin_911",
+    "price": 450.11
+  },
+  {
+    "name": "Furosemide_912",
+    "price": 252.19
+  },
+  {
+    "name": "Salbutamol_913",
+    "price": 361.1
+  },
+  {
+    "name": "Fluconazole_914",
+    "price": 227.15
+  },
+  {
+    "name": "Omeprazole_915",
+    "price": 123.52
+  },
+  {
+    "name": "Omeprazole_916",
+    "price": 186.58
+  },
+  {
+    "name": "Hydrochlorothiazide_917",
+    "price": 454.08
+  },
+  {
+    "name": "Clopidogrel_918",
+    "price": 490.57
+  },
+  {
+    "name": "Prednisone_919",
+    "price": 283.13
+  },
+  {
+    "name": "Prednisone_920",
+    "price": 35.68
+  },
+  {
+    "name": "Paracetamol_921",
+    "price": 415.51
+  },
+  {
+    "name": "Azithromycin_922",
+    "price": 440.13
+  },
+  {
+    "name": "Furosemide_923",
+    "price": 318.42
+  },
+  {
+    "name": "Prednisone_924",
+    "price": 170.48
+  },
+  {
+    "name": "Amoxicillin_925",
+    "price": 373.74
+  },
+  {
+    "name": "Ciprofloxacin_926",
+    "price": 104.78
+  },
+  {
+    "name": "Diclofenac_927",
+    "price": 458.53
+  },
+  {
+    "name": "Clopidogrel_928",
+    "price": 317.45
+  },
+  {
+    "name": "Amlodipine_929",
+    "price": 383.19
+  },
+  {
+    "name": "Tramadol_930",
+    "price": 420.24
+  },
+  {
+    "name": "Clopidogrel_931",
+    "price": 67.93
+  },
+  {
+    "name": "Cefixime_932",
+    "price": 22.11
+  },
+  {
+    "name": "Atorvastatin_933",
+    "price": 185.66
+  },
+  {
+    "name": "Doxycycline_934",
+    "price": 44.39
+  },
+  {
+    "name": "Atorvastatin_935",
+    "price": 449.21
+  },
+  {
+    "name": "Domperidone_936",
+    "price": 70.92
+  },
+  {
+    "name": "Cetirizine_937",
+    "price": 152.88
+  },
+  {
+    "name": "Prednisone_938",
+    "price": 170.64
+  },
+  {
+    "name": "Amlodipine_939",
+    "price": 161.04
+  },
+  {
+    "name": "Diclofenac_940",
+    "price": 227.02
+  },
+  {
+    "name": "Paracetamol_941",
+    "price": 262.4
+  },
+  {
+    "name": "Azithromycin_942",
+    "price": 165.86
+  },
+  {
+    "name": "Azithromycin_943",
+    "price": 170.99
+  },
+  {
+    "name": "Hydrochlorothiazide_944",
+    "price": 14.04
+  },
+  {
+    "name": "Atorvastatin_945",
+    "price": 258.41
+  },
+  {
+    "name": "Tramadol_946",
+    "price": 340.43
+  },
+  {
+    "name": "Ranitidine_947",
+    "price": 243.72
+  },
+  {
+    "name": "Ranitidine_948",
+    "price": 449.19
+  },
+  {
+    "name": "Losartan_949",
+    "price": 467.73
+  },
+  {
+    "name": "Simvastatin_950",
+    "price": 253.3
+  },
+  {
+    "name": "Sertraline_951",
+    "price": 176.35
+  },
+  {
+    "name": "Losartan_952",
+    "price": 83.11
+  },
+  {
+    "name": "Tramadol_953",
+    "price": 330.05
+  },
+  {
+    "name": "Tramadol_954",
+    "price": 410.43
+  },
+  {
+    "name": "Ciprofloxacin_955",
+    "price": 495.24
+  },
+  {
+    "name": "Cetirizine_956",
+    "price": 186.46
+  },
+  {
+    "name": "Omeprazole_957",
+    "price": 109.38
+  },
+  {
+    "name": "Clopidogrel_958",
+    "price": 316.49
+  },
+  {
+    "name": "Omeprazole_959",
+    "price": 444.12
+  },
+  {
+    "name": "Losartan_960",
+    "price": 44.0
+  },
+  {
+    "name": "Metoprolol_961",
+    "price": 223.03
+  },
+  {
+    "name": "Paracetamol_962",
+    "price": 109.02
+  },
+  {
+    "name": "Lisinopril_963",
+    "price": 459.0
+  },
+  {
+    "name": "Tramadol_964",
+    "price": 257.12
+  },
+  {
+    "name": "Metformin_965",
+    "price": 35.11
+  },
+  {
+    "name": "Clopidogrel_966",
+    "price": 249.94
+  },
+  {
+    "name": "Azithromycin_967",
+    "price": 43.24
+  },
+  {
+    "name": "Sertraline_968",
+    "price": 312.15
+  },
+  {
+    "name": "Clopidogrel_969",
+    "price": 58.53
+  },
+  {
+    "name": "Doxycycline_970",
+    "price": 439.54
+  },
+  {
+    "name": "Losartan_971",
+    "price": 86.37
+  },
+  {
+    "name": "Sertraline_972",
+    "price": 313.81
+  },
+  {
+    "name": "Salbutamol_973",
+    "price": 445.29
+  },
+  {
+    "name": "Paracetamol_974",
+    "price": 335.44
+  },
+  {
+    "name": "Levothyroxine_975",
+    "price": 315.33
+  },
+  {
+    "name": "Sertraline_976",
+    "price": 52.99
+  },
+  {
+    "name": "Tramadol_977",
+    "price": 199.82
+  },
+  {
+    "name": "Fluconazole_978",
+    "price": 308.0
+  },
+  {
+    "name": "Cetirizine_979",
+    "price": 23.97
+  },
+  {
+    "name": "Cetirizine_980",
+    "price": 17.64
+  },
+  {
+    "name": "Atorvastatin_981",
+    "price": 449.49
+  },
+  {
+    "name": "Paracetamol_982",
+    "price": 412.02
+  },
+  {
+    "name": "Gabapentin_983",
+    "price": 234.9
+  },
+  {
+    "name": "Omeprazole_984",
+    "price": 351.09
+  },
+  {
+    "name": "Paracetamol_985",
+    "price": 81.37
+  },
+  {
+    "name": "Diclofenac_986",
+    "price": 223.56
+  },
+  {
+    "name": "Paracetamol_987",
+    "price": 431.8
+  },
+  {
+    "name": "Azithromycin_988",
+    "price": 450.21
+  },
+  {
+    "name": "Cefixime_989",
+    "price": 127.1
+  },
+  {
+    "name": "Azithromycin_990",
+    "price": 375.83
+  },
+  {
+    "name": "Omeprazole_991",
+    "price": 356.43
+  },
+  {
+    "name": "Losartan_992",
+    "price": 319.22
+  },
+  {
+    "name": "Hydrochlorothiazide_993",
+    "price": 469.62
+  },
+  {
+    "name": "Ciprofloxacin_994",
+    "price": 239.15
+  },
+  {
+    "name": "Losartan_995",
+    "price": 269.92
+  },
+  {
+    "name": "Metformin_996",
+    "price": 261.47
+  },
+  {
+    "name": "Amoxicillin_997",
+    "price": 479.72
+  },
+  {
+    "name": "Azithromycin_998",
+    "price": 262.32
+  },
+  {
+    "name": "Ciprofloxacin_999",
+    "price": 261.91
+  },
+  {
+    "name": "Salbutamol_1000",
+    "price": 168.19
+  }
+]

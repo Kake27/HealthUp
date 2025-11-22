@@ -6,12 +6,17 @@ const AppointmentSchema = new mongoose.Schema(
     patient: { type: mongoose.Schema.Types.ObjectId, ref: "Patient", required: true },
     date: { type: Date, required: true },
     timeSlot: { type: String },
-    fee: { type: Number, default: 500 },
+    fee: { type: Number, default: 500 },  
     status: { type: String, enum: ["Pending", "Confirmed", "Cancelled", "Completed"], default: "Pending" },
     isPaid: { type: Boolean, default: false }, // Payment status
     symptoms: { type: String } // Optional, if you want to record reason for the visit
   },
   { timestamps: true }
+);
+
+AppointmentSchema.index(
+  { doctor: 1, date: 1, timeSlot: 1 },
+  { unique: true }
 );
 
 const Appointment = mongoose.model("Appointment", AppointmentSchema);

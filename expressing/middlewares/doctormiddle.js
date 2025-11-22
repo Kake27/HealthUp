@@ -16,7 +16,7 @@ const requireDoctor = async (req, res, next) => {
       console.log("fff");
       return res.status(403).json({ message: "Access Denied. Only doctors allowed." });
     }
-next();
+        next();
   } catch (error) {
     res.status(401).json({ message: "Invalid or Expired Token" });
   }

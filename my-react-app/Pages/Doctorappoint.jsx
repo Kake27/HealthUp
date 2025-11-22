@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import CommonContext from "../context/Commoncontext.jsx";
 import "../CSS/DoctorAppointments.css";
+import MedicineAutocomplete from "./Medicinecomponent.jsx";
 
 const API_BASE = "http://localhost:9000";
 
@@ -16,38 +17,62 @@ export default function DoctorAppointments() {
     instructions: ""
   });
 
+
+
+ 
+
   useEffect(() => {
-    async function loadAppointments() {
+    const loadAppointments = async () => {
       setLoadingFetch(true);
       setError("");
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch(
-          `${API_BASE}/api/healthcare/doctor/doctor-appointment`,
-          { headers: { "auth-token": token } }
-        );
+        const res = await fetch(`${API_BASE}/api/healthcare/doctor/doctor-appointment`, {
+          headers: { "auth-token": token }
+        });
         if (!res.ok) throw new Error(`Status ${res.status}`);
         const data = await res.json();
-        if (data.success) {
-          setAppointments(data.appointments || []);
-        } else {
-          throw new Error(data.message || "Failed to load");
-        }
+        if (!data.success) throw new Error(data.message || "Failed to load");
+        setAppointments(data.appointments || []);
       } catch (err) {
         console.error(err);
         setError("Could not load appointments");
-        setAppointments([]);
       } finally {
         setLoadingFetch(false);
       }
-    }
+    };
     loadAppointments();
   }, []);
+
+  // add a blank row
+  const addMedicineRow = () =>
+    setPrescription(prev => ({
+      ...prev,
+      medicines: [...prev.medicines, { name: "", dosage: "", duration: "" }]
+    }));
+
+  // update dosage/duration fields
+  const updateMedicine = (idx, field, value) =>
+    setPrescription(prev => {
+      const meds = [...prev.medicines];
+      meds[idx][field] = value;
+      return { ...prev, medicines: meds };
+    });
+
+  //handle selecting a medicine name in row `idx`
+  const handleSelectMedicine = (idx, medName) =>
+    setPrescription(prev => {
+      const meds = [...prev.medicines];
+    meds[idx] = {
+  ...meds[idx],
+  name: medName,
+};
+      return { ...prev, medicines: meds };
+    });
 
   const submitPrescription = async () => {
     if (!selectedApp?._id) return;
     setLoadingSubmit(true);
-
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
@@ -65,60 +90,38 @@ export default function DoctorAppointments() {
       const data = await res.json();
       if (!data.success) throw new Error(data.message || "Save failed");
 
-      // Mark appointment completed locally
-      console.log(selectedApp.status)
-       selectedApp.status="completed";
-       console.log(selectedApp.status);
+      // mark completed locally
       setAppointments(prev =>
         prev.map(app =>
-          app._id === selectedApp._id ? { ...app, status: 'Completed' } : app
+          app._id === selectedApp._id
+            ? { ...app, status: "Completed" }
+            : app
         )
       );
-
-     
       alert("Prescription saved");
       setSelectedApp(null);
       setPrescription({
         medicines: [{ name: "", dosage: "", duration: "" }],
         instructions: ""
       });
-
-      // re-fetch appointments
-      setLoadingFetch(true);
-      const reload = await fetch(
-        `${API_BASE}/api/healthcare/doctor/doctor-appointment`,
-        { headers: { "auth-token": token } }
-      );
-      const reloadData = await reload.json();
-      setAppointments(reloadData.success ? reloadData.appointments : []);
     } catch (err) {
       console.error(err);
       alert("Error saving prescription");
     } finally {
       setLoadingSubmit(false);
-      setLoadingFetch(false);
     }
-  };
-
-  const updateMedicine = (idx, field, value) => {
-    setPrescription(prev => {
-      const meds = [...prev.medicines];
-      meds[idx][field] = value;
-      return { ...prev, medicines: meds };
-    });
-  };
-  const addMedicineRow = () => {
-    setPrescription(prev => ({
-      ...prev,
-      medicines: [...prev.medicines, { name: "", dosage: "", duration: "" }]
-    }));
   };
 
   if (loadingFetch) return <p>Loading appointments…</p>;
   if (error) return <p className="error">{error}</p>;
 
-  // filter out completed appointments
-  const availableApps = appointments.filter(app => app.status !== 'Completed');
+  const today = new Date().toISOString().split("T")[0]; 
+
+const availableApps = appointments.filter(app => {
+  const appDate = new Date(app.date).toISOString().split("T")[0];
+  return app.status !== "Completed" && appDate === today;
+});
+
 
   return (
     <div className="doctor-appointments-page">
@@ -140,9 +143,11 @@ export default function DoctorAppointments() {
               }}
             >
               <div>
-                <strong>{new Date(app.date).toLocaleDateString()}</strong> — {app.timeSlot}
+                <strong>{new Date(app.date).toLocaleDateString()}</strong> —{" "}
+                {app.timeSlot}
               </div>
-              <div>{app.patient || 'Unknown patient'}</div>
+              {console.log(app)}
+              <div>{app.patient || "Unknown patient"}</div>
             </li>
           ))}
         </ul>
@@ -155,12 +160,11 @@ export default function DoctorAppointments() {
           <label>Medicines:</label>
           {prescription.medicines.map((med, i) => (
             <div key={i} className="medicine-row">
-              <input
-                type="text"
-                placeholder="Name"
-                value={med.name}
-                onChange={e => updateMedicine(i, "name", e.target.value)}
+              <MedicineAutocomplete
+                onSelect={medName => handleSelectMedicine(i, medName)}
+              
               />
+
               <input
                 type="text"
                 placeholder="Dosage"
@@ -183,7 +187,10 @@ export default function DoctorAppointments() {
           <textarea
             value={prescription.instructions}
             onChange={e =>
-              setPrescription(prev => ({ ...prev, instructions: e.target.value }))
+              setPrescription(prev => ({
+                ...prev,
+                instructions: e.target.value
+              }))
             }
           />
 

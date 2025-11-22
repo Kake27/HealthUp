@@ -222,6 +222,7 @@ try{
   //   }}).select("date timeSlot fee status isPaid symptoms") 
   .sort({ date: -1 }); 
 
+  console.log(appointments,"rrgrg");
 res.status(200).json({ success: true, appointments });
 
 }

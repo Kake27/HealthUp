@@ -1,8 +1,25 @@
 // src/components/FindDoctor.jsx
 
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import '../CSS/FindDoctors.css';
+
+
+
+//////////start
+// before you call fetch()
+const API_BASE =
+  ( typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_BASE) ||
+  (typeof process !== 'undefined' && process.env && process.env.REACT_APP_API_BASE) ||
+  'http://localhost:9000';
+
+const tokenUrli = `${API_BASE}/api/payment/token`;
+const checkoutUrli = `${API_BASE}/api/payment/checkout`;
+
+import {dropin} from 'braintree-web-drop-in';
+//end
+
+
 
 const dummyDoctors = [
   { id: 1, name: 'Dr. Priya Sharma', specialization: 'Cardiologist', image: 'https://via.placeholder.com/150', description: 'Specialist in heart and blood vessels.' },
@@ -41,6 +58,203 @@ export default function FindDoctor() {
 
   const [formData, setFormData] = useState({ date: '', symptoms: '' });
   const [message, setMessage] = useState('');
+
+
+//start
+
+
+
+// inside FindDoctor component
+const dropinInstanceRef = useRef(null);
+
+
+
+
+async function handleThroughPayment(doctorUserId, amount = 250.00){
+  setMessage('');
+  setLoading(true);
+
+  // dynamic import fallback so we never call create on undefined
+  let dropinLib = null;
+  try {
+    // If you already imported at top: import dropin from 'braintree-web-drop-in';
+    // this will use that. Otherwise, dynamically import it (works for Vite/CRA/Next client)
+    dropinLib = (typeof dropin !== 'undefined' && dropin) ? dropin : null;
+  } catch (e) {
+    dropinLib = null;
+  }
+
+  if (!dropinLib) {
+    try {
+      const mod = await import('braintree-web-drop-in');
+      dropinLib = mod && (mod.default || mod);
+      console.log('dynamic import braintree-web-drop-in', dropinLib);
+    } catch (err) {
+      console.error('Failed to import braintree-web-drop-in:', err);
+      setMessage('Payment library failed to load (see console).');
+      setLoading(false);
+      return;
+    }
+  }
+
+  if (!dropinLib || typeof dropinLib.create !== 'function') {
+    console.error('dropinLib is missing create():', dropinLib);
+    setMessage('Payment UI unavailable (library not loaded).');
+    setLoading(false);
+    return;
+  }
+
+  try {
+    // const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:9000';
+    // const tokenUrl = `${API_BASE}/api/payment/token`;
+
+    const tokenRes = await fetch(tokenUrli, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json', 'auth-token': localStorage.getItem('token') || '' }
+    });
+
+    const tokenText = await tokenRes.text();
+    if (!tokenRes.ok) {
+      console.error('Token request failed:', tokenRes.status, tokenRes.statusText, tokenText);
+      setMessage(`Token request failed: ${tokenRes.status}`);
+      setLoading(false);
+      return;
+    }
+
+    let tokenData;
+    try { tokenData = JSON.parse(tokenText); } 
+    catch (parseErr) {
+      console.error('Token response is not valid JSON:', tokenText);
+      setMessage('Invalid token response from server (see console).');
+      setLoading(false);
+      return;
+    }
+
+    const clientToken = tokenData.clientToken;
+    if (!clientToken) {
+      console.error('No clientToken in response:', tokenData);
+      setMessage('No client token received');
+      setLoading(false);
+      return;
+    }
+
+    // Ensure modal + dropin container exist
+    let modal = document.getElementById('bt-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'bt-modal';
+      Object.assign(modal.style, {
+        position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.45)', display: 'flex',
+        alignItems: 'center', justifyContent: 'center', zIndex: 2000
+      });
+      modal.innerHTML = `
+        <div id="bt-modal-box" style="background:#fff;padding:16px;border-radius:8px;width:420px;max-width:94%;">
+          <h4>Pay ₹${Number(amount).toFixed(2)}</h4>
+          <div id="bt-dropin-container" style="margin:12px 0;"></div>
+          <div style="display:flex;justify-content:flex-end;gap:8px;">
+            <button id="bt-cancel-btn" class="btn btn-secondary">Cancel</button>
+            <button id="bt-pay-btn" class="btn btn-primary">Pay ₹${Number(amount).toFixed(2)}</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
+    // teardown if existing instance
+    if (dropinInstanceRef.current) {
+      await dropinInstanceRef.current.teardown().catch(() => {});
+      dropinInstanceRef.current = null;
+      const container = document.getElementById('bt-dropin-container');
+      if (container) container.innerHTML = '';
+    }
+
+    // create instance using the loaded library
+    const instance = await dropinLib.create({
+      authorization: clientToken,
+      container: '#bt-dropin-container'
+    });
+    dropinInstanceRef.current = instance;
+
+    // wire up buttons
+    const cancelBtn = document.getElementById('bt-cancel-btn');
+    const payBtn = document.getElementById('bt-pay-btn');
+
+    const cleanup = async () => {
+      try { if (dropinInstanceRef.current) await dropinInstanceRef.current.teardown(); } catch(e) {}
+      dropinInstanceRef.current = null;
+      const modalEl = document.getElementById('bt-modal');
+      if (modalEl) modalEl.remove();
+    };
+
+    cancelBtn.onclick = async () => { await cleanup(); setLoading(false); };
+
+    payBtn.onclick = async () => {
+      setLoading(true);
+      try {
+        const payload = await instance.requestPaymentMethod();
+        const nonce = payload.nonce;
+
+        // const checkoutUrli = `${API_BASE}/api/payment/checkout`;
+        const checkoutRes = await fetch(checkoutUrli, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'auth-token': localStorage.getItem('token') || '' },
+          body: JSON.stringify({ paymentMethodNonce: nonce, amount: Number(amount).toFixed(2), doctorUserId })
+        });
+
+        const checkoutText = await checkoutRes.text();
+        console.log(checkoutText);
+        if (!checkoutRes.ok) {
+          console.error('Checkout failed:', checkoutRes.status, checkoutRes.statusText, checkoutText);
+          setMessage('Payment failed (see console).');
+          setLoading(false);
+          return;
+        }
+
+        let checkoutData;
+        try { checkoutData = JSON.parse(checkoutText); } 
+        catch (e) {
+          console.error('Invalid checkout JSON response:', checkoutText);
+          setMessage('Invalid checkout response (see console).');
+          setLoading(false);
+          return;
+        }
+
+        if (checkoutData.success) {
+          setMessage(`Payment successful! Txn id: ${checkoutData.transactionId}`);
+          await cleanup();
+        } else {
+          console.error('Checkout returned error:', checkoutData);
+          setMessage(checkoutData.error || checkoutData.message || 'Payment failed');
+        }
+      } catch (err) {
+        console.error('payment flow error', err);
+        setMessage(err.message || 'Payment failed');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    setLoading(false); // ready for user to click Pay
+  } catch (err) {
+    console.error('payment init error', err);
+    setMessage(err.message || 'Payment initialization failed');
+    setLoading(false);
+  }
+}
+
+
+
+////////end
+
+
+
+
+
+
+
+
+
+
 
   const handleSearch = async (keyword) => {
     setSearched(true);
@@ -154,9 +368,15 @@ export default function FindDoctor() {
 
                 {selectedId === doctorUserId && (
                   <div className="appointment-options" style={{ marginTop: 8 }}>
-                    <button className="btn btn-success" style={{ marginRight: 8 }} onClick={() => {/* through payment */}}>
-                      Through Payment
-                    </button>
+                    <button
+  className="btn btn-success"
+  style={{ marginRight: 8 }}
+  onClick={() => handleThroughPayment(doctorUserId, 250.00)} // change amount as needed
+  disabled={loading}
+>
+  {loading ? 'Processing...' : 'Through Payment'}
+</button>
+
                     <button className="btn btn-secondary" onClick={() => openForm(doctorUserId)}>
                       Without Payment
                     </button>
@@ -198,4 +418,3 @@ export default function FindDoctor() {
     </div>
   );
 }
-
