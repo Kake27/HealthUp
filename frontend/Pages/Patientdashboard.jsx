@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import PatientProfile from "./PatientProfile.jsx";
+import CommonContext from "../context/Commoncontext.jsx";
 import "../CSS/Patientdash.css";
 
 const PatientDashboard = () => {
+  const { patient } = useContext(CommonContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
@@ -50,7 +52,7 @@ const PatientDashboard = () => {
             onClick={() => setDropdownOpen(!dropdownOpen)}
             style={{ paddingRight: "65px", color: "white" }}
           >
-            Welcome, Piyush
+            {patient?.user?.name ? `Welcome, ${patient.user.name}` : "Welcome"}
           </a>
           {dropdownOpen && (
             <ul className="dropdown-menu show">

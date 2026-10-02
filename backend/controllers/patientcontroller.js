@@ -36,7 +36,7 @@ console.log("HEADERS:", req.headers);
     // 1. Verify JWT
     let payload;
     try {
-      payload =  jwt.verify(token, "piyush");
+      payload =  jwt.verify(token, JWT_SECRET);
     } catch (e) {
       return res.status(401).json({ success: false, error: 'Invalid or expired token' });
     }
