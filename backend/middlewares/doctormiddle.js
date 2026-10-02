@@ -3,22 +3,23 @@ const userlogin = require("../models/usermodel.js");
 
 const requireDoctor = async (req, res, next) => {
   try {
-    const token = req.header("Authorization") || req.header("auth-token");
+    const rawToken = req.header("Authorization") || req.header("auth-token");
+    const token = rawToken?.startsWith("Bearer ") ? rawToken.slice(7) : rawToken;
+
     if (!token) {
       return res.status(401).json({ message: "Access Denied. No token provided." });
     }
 
-    const decoded = jwt.verify(token, "piyush");
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || "piyush");
     req.user = await userlogin.findById(decoded.id);
-    console.log(req.user.role,"dekhta hain");
 
     if (!req.user || req.user.role !== "doctor") {
-      console.log("fff");
       return res.status(403).json({ message: "Access Denied. Only doctors allowed." });
     }
-        next();
+
+    next();
   } catch (error) {
-    res.status(401).json({ message: "Invalid or Expired Token" });
+    return res.status(401).json({ message: "Invalid or Expired Token" });
   }
 };
 

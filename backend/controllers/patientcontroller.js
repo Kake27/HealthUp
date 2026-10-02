@@ -7,6 +7,14 @@ const User=require("../models/usermodel.js")
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
 
+const JWT_SECRET = process.env.JWT_SECRET || "piyush";
+
+function getTokenFromRequest(req) {
+  const headerToken = req.body?.token || req.headers["auth-token"] || req.headers["authorization"];
+  if (!headerToken) return null;
+  return headerToken.startsWith("Bearer ") ? headerToken.slice(7) : headerToken;
+}
+
 
 
 async function get_patient(req, res) {
@@ -95,14 +103,20 @@ const appointment = async (req, res) => {
     const { pid, did } = req.params;
     const { date: dateString, symptoms } = req.body;
 
-    const date = new Date(dateString);
-    const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-
-    // 1️⃣ Fetch Doctor
-    const doctor = await doctor_profile.findOne({ user: did });
+    const doctor = (await doctor_profile.findOne({ user: did })) || (await doctor_profile.findById(did));
     if (!doctor) {
       return res.status(404).json({ success: false, message: "Doctor not found" });
     }
+
+    const patientDoc = (await patient_profile.findOne({ user: pid })) || (await patient_profile.findById(pid));
+    if (!patientDoc) {
+      return res.status(404).json({ success: false, message: "Patient not found" });
+    }
+
+    const doctorId = doctor._id;
+    const patientId = patientDoc._id;
+    const date = new Date(dateString);
+    const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
 
     if (!Array.isArray(doctor.availableDays) || doctor.availableDays.length === 0) {
       return res.status(400).json({ success: false, message: "Doctor has no availability configured" });
@@ -112,7 +126,10 @@ const appointment = async (req, res) => {
       return res.status(400).json({ success: false, message: `Doctor not available on ${dayName}.` });
     }
 
-    // 2️⃣ Generate slots
+    if (!doctor.availableTime || !doctor.availableTime.includes("-")) {
+      return res.status(400).json({ success: false, message: "Doctor availability time is not configured properly." });
+    }
+
     const [rawStart, rawEnd] = doctor.availableTime.split("-").map((s) => s.trim());
     const start24 = parseTime12to24(rawStart);
     const end24 = parseTime12to24(rawEnd);
@@ -120,7 +137,6 @@ const appointment = async (req, res) => {
 
     const allSlots = generateSlots(start24, end24, slotDuration);
 
-    // 3️⃣ Get booked slots for that day
     const dayStart = new Date(date);
     dayStart.setHours(0, 0, 0, 0);
 
@@ -128,14 +144,13 @@ const appointment = async (req, res) => {
     dayEnd.setHours(23, 59, 59, 999);
 
     const bookedAppts = await appoint_patient.find({
-      doctor: did,
+      doctor: doctorId,
       date: { $gte: dayStart, $lt: dayEnd }
     }).select("timeSlot -_id");
 
     const bookedSlots = bookedAppts.map(a => a.timeSlot);
     const availableSlots = allSlots.filter(s => !bookedSlots.includes(s));
 
-    // 4️⃣ No available slot → Suggest next available date
     if (availableSlots.length === 0) {
       const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       let nextDate = new Date(dayStart);
@@ -152,12 +167,11 @@ const appointment = async (req, res) => {
           nextDayEnd.setHours(23, 59, 59, 999);
 
           const bookedNext = await appoint_patient.find({
-            doctor: did,
+            doctor: doctorId,
             date: { $gte: nextDayStart, $lt: nextDayEnd }
           }).select("timeSlot -_id");
 
           const bookedNextSlots = bookedNext.map(a => a.timeSlot);
-
           const nextDaySlots = generateSlots(start24, end24, slotDuration);
           const freeNextDaySlots = nextDaySlots.filter(s => !bookedNextSlots.includes(s));
 
@@ -176,15 +190,12 @@ const appointment = async (req, res) => {
       });
     }
 
-    // SAFE SLOT ASSIGNMENT — FIRST FREE SLOT
     const assignedSlot = availableSlots[0];
 
-    //  ATOMIC CREATE (with race-condition handling)
-    let newAppt;
     try {
-      newAppt = await appoint_patient.create({
-        doctor: did,
-        patient: pid,
+      const newAppt = await appoint_patient.create({
+        doctor: doctorId,
+        patient: patientId,
         date,
         timeSlot: assignedSlot,
         fee: doctor.consultationFee,
@@ -193,8 +204,12 @@ const appointment = async (req, res) => {
         symptoms
       });
 
+      return res.status(201).json({
+        success: true,
+        message: "Appointment booked successfully",
+        appointment: newAppt
+      });
     } catch (err) {
-      // If two people try to book same slot → unique index protects us
       if (err.code === 11000) {
         return res.status(400).json({
           success: false,
@@ -204,13 +219,6 @@ const appointment = async (req, res) => {
 
       throw err;
     }
-
-    return res.status(201).json({
-      success: true,
-      message: "Appointment booked successfully",
-      appointment: newAppt
-    });
-
   } catch (error) {
     console.error("Error booking appointment:", error);
     return res.status(500).json({
@@ -226,18 +234,21 @@ const appointment = async (req, res) => {
 const search=async (req,res)=>{
     try {
         const { keyword } = req.params;
-      
+        const matchingUsers = await User.find({
+          name: { $regex: keyword, $options: "i" },
+        }).select("_id");
+
         const results = await doctor_profile.find({
           $or: [
             { specialization: { $regex: keyword, $options: "i" } },
-            { name: { $regex: keyword, $options: "i" } },
+            { user: { $in: matchingUsers.map(user => user._id) } },
           ],
         }).populate("user", "name email").lean().select("specialization experience availableDays availableTime user photo");
-    console.log(results);
-        res.json(results);
+
+        return res.json(results);
       } catch (error) {
         console.log(error);
-        res.status(400).send({
+        return res.status(400).json({
           success: false,
           message: "Error In Search Doctor API",
           error: error.message,
@@ -248,52 +259,48 @@ const search=async (req,res)=>{
 
 const getallappointments = async (req, res) => {
   try {
-
-    const token = req.body.token ||
-      req.headers['auth-token'] ||
-      req.headers['authorization']?.split(' ')[1];
-    console.log(token,"token");
+    const token = getTokenFromRequest(req);
     if (!token) {
       return res.status(400).json({ success: false, error: 'Token is required' });
-    }else{
-      console.log(token);
     }
 
-    // 1. Verify JWT
     let payload;
     try {
-      payload =  jwt.verify(token, "piyush");
+      payload = jwt.verify(token, JWT_SECRET);
     } catch (e) {
       return res.status(401).json({ success: false, error: 'Invalid or expired token' });
     }
 
+    const patientDoc = await patient_profile.findOne({ user: payload.id });
+    if (!patientDoc) {
+      return res.status(404).json({ success: false, error: 'Patient not found' });
+    }
 
-    // Get today's date at midnight (local time)
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-console.log(req);
+
     const appointments = await appoint_patient
       .find({
-        patient: payload.id,
-        status: { $ne: "True" }, // status not "Completed"
-        date: { $gte: today } // today or future
+        patient: patientDoc._id,
+        status: { $ne: "Completed" },
+        date: { $gte: today }
       })
       .populate({
         path: "doctor",
-        select: "specialization",
+        select: "specialization consultationFee",
         populate: {
           path: "user",
           select: "name"
         }
       })
       .select("date timeSlot fee status isPaid symptoms doctor")
-      .sort({ date: 1 }) // soonest first
+      .sort({ date: 1 })
       .lean();
 
-    res.status(200).json({ success: true, appointments });
+    return res.status(200).json({ success: true, appointments });
   } catch (error) {
     console.error("Error fetching patient appointments:", error);
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Error fetching patient appointments",
       error: error.message,
@@ -304,34 +311,38 @@ console.log(req);
 
 const patient_prescription = async (req, res) => {
   try {
-    // Get token from body or headers
-    const token =
-      req.body.token ||
-      req.headers["auth-token"] ||
-      req.headers["authorization"]?.split(" ")[1];
-
+    const token = getTokenFromRequest(req);
     if (!token) {
       return res.status(401).json({ success: false, error: "Token not provided" });
     }
 
-    // Verify and decode the token
     let decoded;
     try {
-      decoded = jwt.verify(token, "piyush"); // Replace "piyush" with your secret
+      decoded = jwt.verify(token, JWT_SECRET);
     } catch (e) {
       return res.status(401).json({ success: false, error: "Invalid or expired token" });
     }
 
-    const patientId = decoded.id || decoded._id; // Check what you stored in token
+    const patientDoc = await patient_profile.findOne({ user: decoded.id });
+    if (!patientDoc) {
+      return res.status(404).json({ success: false, error: "Patient not found" });
+    }
 
-    // Now use patientId to fetch prescriptions
-    const patient_pres = await prescription.find({ patient: patientId });
+    const patient_pres = await prescription
+      .find({ patient: patientDoc._id })
+      .populate({
+        path: "doctor",
+        populate: {
+          path: "user",
+          select: "name",
+        },
+      })
+      .lean();
 
-    console.log(patient_pres);
-    res.status(200).json({ success: true, patient_pres });
+    return res.status(200).json({ success: true, patient_pres });
   } catch (error) {
     console.error("Error fetching patient prescription:", error);
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Error fetching patient prescription",
       error: error.message,

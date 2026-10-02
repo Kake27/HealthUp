@@ -70,8 +70,8 @@ const SignupDoctor = () => {
       const data = await response.json();
       console.log(data);
 
-      if (data.success) {
-        localStorage.setItem('token', data.authtoken);
+      if (response.ok && data.success && data.token) {
+        localStorage.setItem('token', data.token);
         navigate('/doctor-dashboard');
       } else {
         alert(data.error || data.message || 'Signup failed.');

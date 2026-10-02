@@ -41,7 +41,7 @@ const SignupPatient = () => {
       const data = await response.json();
       console.log('Signup response:', data);
 
-      if (response.ok && data.success) {
+      if (response.ok && data.success && data.token) {
         localStorage.setItem('token', data.token);
         navigate('/patient-dashboard');
       } else {

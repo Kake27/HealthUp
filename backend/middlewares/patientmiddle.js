@@ -3,12 +3,14 @@ const userlogin = require("../models/usermodel");
 
 const requirePatient = async (req, res, next) => {
   try {
-    const token = req.header("Authorization") || req.header("auth-token");
+    const rawToken = req.header("Authorization") || req.header("auth-token");
+    const token = rawToken?.startsWith("Bearer ") ? rawToken.slice(7) : rawToken;
+
     if (!token) {
       return res.status(401).json({ message: "Access Denied. No token provided." });
     }
 
-    const decoded = jwt.verify(token, "piyush");
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || "piyush");
     req.user = await userlogin.findById(decoded.id);
 
     if (!req.user || req.user.role !== "patient") {
@@ -17,7 +19,7 @@ const requirePatient = async (req, res, next) => {
 
     next();
   } catch (error) {
-    res.status(401).json({ message: "Invalid or Expired Token" });
+    return res.status(401).json({ message: "Invalid or Expired Token" });
   }
 };
 

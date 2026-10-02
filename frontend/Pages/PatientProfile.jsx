@@ -10,11 +10,17 @@ const PatientProfile = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      const decoded = jwtDecode(token);
-      if (decoded.role === 'patient') {
-        refreshpatient();
-      } else {
-        navigate('/Login');
+      try {
+        const decoded = jwtDecode(token);
+        if (decoded.role === 'patient') {
+          refreshpatient();
+        } else {
+          localStorage.removeItem('token');
+          navigate('/Login', { replace: true });
+        }
+      } catch {
+        localStorage.removeItem('token');
+        navigate('/Login', { replace: true });
       }
     }
   }, []);

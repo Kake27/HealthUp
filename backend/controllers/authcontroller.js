@@ -8,6 +8,14 @@ const crypto     = require("crypto");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
+const JWT_SECRET = process.env.JWT_SECRET || "piyush";
+
+const createAuthToken = (user) => jwt.sign(
+  { id: user._id, email: user.email, role: user.role },
+  JWT_SECRET,
+  { expiresIn: "1h" }
+);
+
 const signupdoctor = async (req, res) => {
   try {
     const {
@@ -58,11 +66,13 @@ const signupdoctor = async (req, res) => {
 }
 
     const newDoctor = await doctorsign.create(doctorData);
+    const token = createAuthToken(newUser);
 
     return res.status(201).json({
       success: true,
       message: "Doctor registered successfully",
-      doctor: newDoctor
+      doctor: newDoctor,
+      token
     });
   } catch (e) {
     console.error("Registration Error:", e);
@@ -107,11 +117,13 @@ console.log(name);
       gender,
       medicalHistory
     });
+    const token = createAuthToken(newUser);
 
     return res.status(201).json({
       success: true,
       message: "Patient registered successfully",
-      patient: newPatient
+      patient: newPatient,
+      token
     });
   } catch (e) {
     console.error("Patient Registration Error:", e);
@@ -152,11 +164,7 @@ console.log(email);
       });
     }
 
-    const token = jwt.sign(
-      { id: user._id, email: user.email, role: user.role },
-      "piyush",
-      { expiresIn: "1h" }
-    );
+    const token = createAuthToken(user);
 
     return res.status(200).json({
       success: true,
