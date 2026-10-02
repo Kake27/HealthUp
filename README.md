@@ -1,4 +1,4 @@
-# Healthcare Management System
+# HealthUp - A Healthcare Management System
 
 A full-stack healthcare application for patients and doctors. It provides account registration and login, patient and doctor profiles, doctor search, appointment booking and management, prescriptions, medicine lookup, password resets, and Braintree Sandbox payment integration.
 
